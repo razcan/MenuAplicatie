@@ -12,8 +12,9 @@ import {PageEvent} from '@angular/material';
 export class ContractListComponent  {
   @ViewChild(MatSort) sort: MatSort;
 
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns = ['PartnerName', 'ContractType', 'ContrDataStart', 'ContrDataFinal', 'ContrResponsible', 'Currency'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+
 
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
@@ -42,31 +43,173 @@ export class ContractListComponent  {
 }
 
 export interface Element {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  PartnerName: string;
+  ContractType: string;
+  ContrDataStart: string;
+  ContrDataFinal: string;
+  ContrResponsible: string;
+  Currency: string;
 }
 
 const ELEMENT_DATA: Element[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-  {position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
-  {position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
-  {position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
-  {position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
-  {position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
-  {position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S'},
-  {position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
-  {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
-  {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
-  {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
+    {
+      'PartnerName': 'Tristique Industries',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '09/13/2018',
+      'ContrDataFinal': '03/27/2018',
+      'ContrResponsible': 'Connor',
+      'Currency': '$26.22'
+    },
+    {
+      'PartnerName': 'Consectetuer Euismod Corporation',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '10/03/2017',
+      'ContrDataFinal': '11/15/2017',
+      'ContrResponsible': 'Herrod',
+      'Currency': '$89.42'
+    },
+    {
+      'PartnerName': 'Convallis Ligula Associates',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '03/29/2017',
+      'ContrDataFinal': '08/21/2017',
+      'ContrResponsible': 'Lance',
+      'Currency': '$7.78'
+    },
+    {
+      'PartnerName': 'Non Leo LLC',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '01/21/2017',
+      'ContrDataFinal': '10/16/2018',
+      'ContrResponsible': 'Giacomo',
+      'Currency': '$64.94'
+    },
+    {
+      'PartnerName': 'Gravida Mauris Consulting',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '06/11/2018',
+      'ContrDataFinal': '06/03/2018',
+      'ContrResponsible': 'Burton',
+      'Currency': '$51.36'
+    },
+    {
+      'PartnerName': 'Sed Neque Limited',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '12/12/2016',
+      'ContrDataFinal': '10/28/2018',
+      'ContrResponsible': 'Rogan',
+      'Currency': '$19.00'
+    },
+    {
+      'PartnerName': 'Ante Ipsum Limited',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '08/17/2017',
+      'ContrDataFinal': '12/16/2017',
+      'ContrResponsible': 'Rajah',
+      'Currency': '$56.76'
+    },
+    {
+      "PartnerName": "Egestas Aliquam Fringilla Foundation",
+      "ContractType": "Furnizare",
+      "ContrDataStart": "09/24/2017",
+      "ContrDataFinal": "08/30/2017",
+      "ContrResponsible": "Mufutau",
+      "Currency": "$66.85"
+    },
+    {
+      "PartnerName": "Id Libero Industries",
+      "ContractType": "Achizite",
+      "ContrDataStart": "11/12/2018",
+      "ContrDataFinal": "09/29/2018",
+      "ContrResponsible": "Richard",
+      "Currency": "$94.54"
+    },
+    {
+      "PartnerName": "Ac Associates",
+      "ContractType": "Achizite",
+      "ContrDataStart": "05/01/2017",
+      "ContrDataFinal": "09/21/2018",
+      "ContrResponsible": "Mason",
+      "Currency": "$57.46"
+    },
+    {
+      "PartnerName": "Tincidunt Nibh Phasellus Incorporated",
+      "ContractType": "Achizite",
+      "ContrDataStart": "03/28/2017",
+      "ContrDataFinal": "06/23/2017",
+      "ContrResponsible": "Sean",
+      "Currency": "$16.04"
+    },
+    {
+      "PartnerName": "Nullam Velit Corporation",
+      "ContractType": "Achizite",
+      "ContrDataStart": "09/22/2018",
+      "ContrDataFinal": "01/18/2017",
+      "ContrResponsible": "Arthur",
+      "Currency": "$66.91"
+    },
+    {
+      "PartnerName": "Imperdiet Erat PC",
+      "ContractType": "Achizite",
+      "ContrDataStart": "12/18/2016",
+      "ContrDataFinal": "09/23/2018",
+      "ContrResponsible": "Jack",
+      "Currency": "$50.30"
+    },
+    {
+      "PartnerName": "Velit Eget Laoreet LLP",
+      "ContractType": "Achizite",
+      "ContrDataStart": "07/05/2018",
+      "ContrDataFinal": "05/11/2018",
+      "ContrResponsible": "Avram",
+      "Currency": "$20.87"
+    },
+    {
+      "PartnerName": "Et Risus Institute",
+      "ContractType": "Achizite",
+      "ContrDataStart": "06/25/2018",
+      "ContrDataFinal": "07/26/2017",
+      "ContrResponsible": "Kelly",
+      "Currency": "$78.85"
+    },
+    {
+      "PartnerName": "Proin Sed Turpis Incorporated",
+      "ContractType": "Achizite",
+      "ContrDataStart": "08/24/2017",
+      "ContrDataFinal": "05/28/2018",
+      "ContrResponsible": "Camden",
+      "Currency": "$13.70"
+    },
+    {
+      "PartnerName": "Donec Tincidunt PC",
+      "ContractType": "Furnizare",
+      "ContrDataStart": "11/07/2017",
+      "ContrDataFinal": "04/28/2018",
+      "ContrResponsible": "Hashim",
+      "Currency": "$71.62"
+    },
+    {
+      "PartnerName": "Amet Consectetuer Adipiscing Company",
+      "ContractType": "Furnizare",
+      "ContrDataStart": "01/14/2017",
+      "ContrDataFinal": "09/22/2018",
+      "ContrResponsible": "Macaulay",
+      "Currency": "$57.31"
+    },
+    {
+      "PartnerName": "Tristique Company",
+      "ContractType": "Furnizare",
+      "ContrDataStart": "06/22/2018",
+      "ContrDataFinal": "12/05/2018",
+      "ContrResponsible": "Ryder",
+      "Currency": "$69.42"
+    },
+    {
+      "PartnerName": "Ultricies Adipiscing Enim Institute",
+      "ContractType": "Furnizare",
+      "ContrDataStart": "08/14/2017",
+      "ContrDataFinal": "05/12/2018",
+      "ContrResponsible": "Macaulay",
+      "Currency": "$9.28"
+    }
 ];

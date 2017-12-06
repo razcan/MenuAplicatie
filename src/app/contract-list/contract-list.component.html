@@ -10,27 +10,39 @@
   <mat-table #table [dataSource]="dataSource" matSort>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    <ng-container matColumnDef="PartnerName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> PartnerName </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.PartnerName}} </mat-cell> 
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    <ng-container matColumnDef="ContractType">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ContractType </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ContractType}} </mat-cell>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    <ng-container matColumnDef="ContrDataStart">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ContrDataStart </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ContrDataStart}} </mat-cell>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    
+    <ng-container matColumnDef="ContrResponsible">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ContrResponsible </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ContrResponsible}}  </mat-cell>
+    </ng-container>
+ 
+    <ng-container matColumnDef="ContrDataFinal">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ContrDataFinal </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ContrDataFinal}}  </mat-cell>
+    </ng-container>
+
+     
+    <ng-container matColumnDef="Currency">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Currency </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Currency}}  </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns" ></mat-header-row>

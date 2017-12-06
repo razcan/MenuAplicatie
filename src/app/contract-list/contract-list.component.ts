@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
 import {ViewChild} from '@angular/core';
 import { MatSort} from '@angular/material';
-
+import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-contract-list',
@@ -23,6 +23,20 @@ export class ContractListComponent  {
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+  }
+  // tslint:disable-next-line:member-ordering
+  length = 100;
+  // tslint:disable-next-line:member-ordering
+  pageSize = 10;
+  // tslint:disable-next-line:member-ordering
+  pageSizeOptions = [5, 10, 25, 100];
+
+  // MatPaginator Output
+  // tslint:disable-next-line:member-ordering
+  pageEvent: PageEvent;
+
+  setPageSizeOptions(setPageSizeOptionsInput: string) {
+    this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
   }
 
 }

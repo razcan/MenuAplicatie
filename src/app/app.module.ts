@@ -1,6 +1,9 @@
+import { AppComponent } from './app.component';
+import { ContractListComponent } from './contract-list/contract-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -30,16 +33,16 @@ import {
   MatStepperModule,
 } from '@angular/material';
 
-
-import { AppComponent } from './app.component';
-
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContractListComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      {path: 'contract-list',
+      component: ContractListComponent}]),
     MatStepperModule,
     MatIconModule,
     MatInputModule,
@@ -96,3 +99,5 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export const routingComponents =  [ContractListComponent];

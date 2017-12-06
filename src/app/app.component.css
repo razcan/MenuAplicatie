@@ -14,14 +14,15 @@
   }
   mat-sidenav {
     width: 250px;
-    background: rgb(129, 129, 129);
+    background: rgb(235, 235, 235);
   }
   mat-toolbar {
     background: rgb(179, 220, 235);
    
   }
   mat-expansion-panel-header {
-    background: rgb(129, 129, 129);
+    background: rgb(235, 235, 235);
+    
   }
   #Icon {
       padding-right: 10px;
@@ -95,8 +96,8 @@ i, span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background:  rgb(129, 129, 129);;
-    color: rgb(255, 255, 255);
+    background:  rgb(235, 235, 235);
+    color: rgb(235, 235, 235);
     transition: all 0.1s;
 }
 

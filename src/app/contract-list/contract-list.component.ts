@@ -12,7 +12,7 @@ import {PageEvent} from '@angular/material';
 export class ContractListComponent  {
   @ViewChild(MatSort) sort: MatSort;
 
-  displayedColumns = ['PartnerName', 'ContractType', 'ContrDataStart', 'ContrDataFinal', 'ContrResponsible', 'Currency'];
+  displayedColumns = ['PartnerName', 'NrContract',  'ContractType', 'ContrDataStart', 'ContrDataFinal', 'ContrResponsible', 'Currency'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
 
@@ -44,6 +44,7 @@ export class ContractListComponent  {
 
 export interface Element {
   PartnerName: string;
+  NrContract: string;
   ContractType: string;
   ContrDataStart: string;
   ContrDataFinal: string;
@@ -54,6 +55,7 @@ export interface Element {
 const ELEMENT_DATA: Element[] = [
     {
       'PartnerName': 'Tristique Industries',
+      'NrContract': '1',
       'ContractType': 'Achizite',
       'ContrDataStart': '09/13/2018',
       'ContrDataFinal': '03/27/2018',
@@ -62,6 +64,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Consectetuer Euismod Corporation',
+      'NrContract': '2341',
       'ContractType': 'Furnizare',
       'ContrDataStart': '10/03/2017',
       'ContrDataFinal': '11/15/2017',
@@ -70,6 +73,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Convallis Ligula Associates',
+      'NrContract': '1345',
       'ContractType': 'Furnizare',
       'ContrDataStart': '03/29/2017',
       'ContrDataFinal': '08/21/2017',
@@ -78,6 +82,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Non Leo LLC',
+      'NrContract': '3451',
       'ContractType': 'Furnizare',
       'ContrDataStart': '01/21/2017',
       'ContrDataFinal': '10/16/2018',
@@ -86,6 +91,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Gravida Mauris Consulting',
+      'NrContract': '1',
       'ContractType': 'Achizite',
       'ContrDataStart': '06/11/2018',
       'ContrDataFinal': '06/03/2018',
@@ -94,6 +100,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Sed Neque Limited',
+      'NrContract': '5671',
       'ContractType': 'Furnizare',
       'ContrDataStart': '12/12/2016',
       'ContrDataFinal': '10/28/2018',
@@ -102,6 +109,7 @@ const ELEMENT_DATA: Element[] = [
     },
     {
       'PartnerName': 'Ante Ipsum Limited',
+      'NrContract': '5671',
       'ContractType': 'Achizite',
       'ContrDataStart': '08/17/2017',
       'ContrDataFinal': '12/16/2017',
@@ -109,107 +117,120 @@ const ELEMENT_DATA: Element[] = [
       'Currency': '$56.76'
     },
     {
-      "PartnerName": "Egestas Aliquam Fringilla Foundation",
-      "ContractType": "Furnizare",
-      "ContrDataStart": "09/24/2017",
-      "ContrDataFinal": "08/30/2017",
-      "ContrResponsible": "Mufutau",
-      "Currency": "$66.85"
+      'PartnerName': 'Egestas Aliquam Fringilla Foundation',
+      'NrContract': '7891',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '09/24/2017',
+      'ContrDataFinal': '08/30/2017',
+      'ContrResponsible': 'Mufutau',
+      'Currency': '$66.85'
     },
     {
-      "PartnerName": "Id Libero Industries",
-      "ContractType": "Achizite",
-      "ContrDataStart": "11/12/2018",
-      "ContrDataFinal": "09/29/2018",
-      "ContrResponsible": "Richard",
-      "Currency": "$94.54"
+      'PartnerName': 'Id Libero Industries',
+      'NrContract': '1789',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '11/12/2018',
+      'ContrDataFinal': '09/29/2018',
+      'ContrResponsible': 'Richard',
+      'Currency': '$94.54'
     },
     {
-      "PartnerName": "Ac Associates",
-      "ContractType": "Achizite",
-      "ContrDataStart": "05/01/2017",
-      "ContrDataFinal": "09/21/2018",
-      "ContrResponsible": "Mason",
-      "Currency": "$57.46"
+      'PartnerName': 'Ac Associates',
+      'NrContract': '7891',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '05/01/2017',
+      'ContrDataFinal': '09/21/2018',
+      'ContrResponsible': 'Mason',
+      'Currency': '$57.46'
     },
     {
-      "PartnerName": "Tincidunt Nibh Phasellus Incorporated",
-      "ContractType": "Achizite",
-      "ContrDataStart": "03/28/2017",
-      "ContrDataFinal": "06/23/2017",
-      "ContrResponsible": "Sean",
-      "Currency": "$16.04"
+      'PartnerName': 'Tincidunt Nibh Phasellus Incorporated',
+      'NrContract': '781',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '03/28/2017',
+      'ContrDataFinal': '06/23/2017',
+      'ContrResponsible': 'Sean',
+      'Currency': '$16.04'
     },
     {
-      "PartnerName": "Nullam Velit Corporation",
-      "ContractType": "Achizite",
-      "ContrDataStart": "09/22/2018",
-      "ContrDataFinal": "01/18/2017",
-      "ContrResponsible": "Arthur",
-      "Currency": "$66.91"
+      'PartnerName': 'Nullam Velit Corporation',
+      'NrContract': '1789',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '09/22/2018',
+      'ContrDataFinal': '01/18/2017',
+      'ContrResponsible': 'Arthur',
+      'Currency': '$66.91'
     },
     {
-      "PartnerName": "Imperdiet Erat PC",
-      "ContractType": "Achizite",
-      "ContrDataStart": "12/18/2016",
-      "ContrDataFinal": "09/23/2018",
-      "ContrResponsible": "Jack",
-      "Currency": "$50.30"
+      'PartnerName': 'Imperdiet Erat PC',
+      'NrContract': '91',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '12/18/2016',
+      'ContrDataFinal': '09/23/2018',
+      'ContrResponsible': 'Jack',
+      'Currency': '$50.30'
     },
     {
-      "PartnerName": "Velit Eget Laoreet LLP",
-      "ContractType": "Achizite",
-      "ContrDataStart": "07/05/2018",
-      "ContrDataFinal": "05/11/2018",
-      "ContrResponsible": "Avram",
-      "Currency": "$20.87"
+      'PartnerName': 'Velit Eget Laoreet LLP',
+      'NrContract': '71',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '07/05/2018',
+      'ContrDataFinal': '05/11/2018',
+      'ContrResponsible': 'Avram',
+      'Currency': '$20.87'
     },
     {
-      "PartnerName": "Et Risus Institute",
-      "ContractType": "Achizite",
-      "ContrDataStart": "06/25/2018",
-      "ContrDataFinal": "07/26/2017",
-      "ContrResponsible": "Kelly",
-      "Currency": "$78.85"
+      'PartnerName': 'Et Risus Institute',
+      'NrContract': '7891',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '06/25/2018',
+      'ContrDataFinal': '07/26/2017',
+      'ContrResponsible': 'Kelly',
+      'Currency': '$78.85'
     },
     {
-      "PartnerName": "Proin Sed Turpis Incorporated",
-      "ContractType": "Achizite",
-      "ContrDataStart": "08/24/2017",
-      "ContrDataFinal": "05/28/2018",
-      "ContrResponsible": "Camden",
-      "Currency": "$13.70"
+      'PartnerName': 'Proin Sed Turpis Incorporated',
+      'NrContract': '7891',
+      'ContractType': 'Achizite',
+      'ContrDataStart': '08/24/2017',
+      'ContrDataFinal': '05/28/2018',
+      'ContrResponsible': 'Camden',
+      'Currency': '$13.70'
     },
     {
-      "PartnerName": "Donec Tincidunt PC",
-      "ContractType": "Furnizare",
-      "ContrDataStart": "11/07/2017",
-      "ContrDataFinal": "04/28/2018",
-      "ContrResponsible": "Hashim",
-      "Currency": "$71.62"
+      'PartnerName': 'Donec Tincidunt PC',
+      'NrContract': '871',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '11/07/2017',
+      'ContrDataFinal': '04/28/2018',
+      'ContrResponsible': 'Hashim',
+      'Currency': '$71.62'
     },
     {
-      "PartnerName": "Amet Consectetuer Adipiscing Company",
-      "ContractType": "Furnizare",
-      "ContrDataStart": "01/14/2017",
-      "ContrDataFinal": "09/22/2018",
-      "ContrResponsible": "Macaulay",
-      "Currency": "$57.31"
+      'PartnerName': 'Amet Consectetuer Adipiscing Company',
+      'NrContract': '91',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '01/14/2017',
+      'ContrDataFinal': '09/22/2018',
+      'ContrResponsible': 'Macaulay',
+      'Currency': '$57.31'
     },
     {
-      "PartnerName": "Tristique Company",
-      "ContractType": "Furnizare",
-      "ContrDataStart": "06/22/2018",
-      "ContrDataFinal": "12/05/2018",
-      "ContrResponsible": "Ryder",
-      "Currency": "$69.42"
+      'PartnerName': 'Tristique Company',
+      'NrContract': '12',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '06/22/2018',
+      'ContrDataFinal': '12/05/2018',
+      'ContrResponsible': 'Ryder',
+      'Currency': '$69.42'
     },
     {
-      "PartnerName": "Ultricies Adipiscing Enim Institute",
-      "ContractType": "Furnizare",
-      "ContrDataStart": "08/14/2017",
-      "ContrDataFinal": "05/12/2018",
-      "ContrResponsible": "Macaulay",
-      "Currency": "$9.28"
+      'PartnerName': 'Ultricies Adipiscing Enim Institute',
+      'NrContract': '11',
+      'ContractType': 'Furnizare',
+      'ContrDataStart': '08/14/2017',
+      'ContrDataFinal': '05/12/2018',
+      'ContrResponsible': 'Macaulay',
+      'Currency': '$9.28'
     }
 ];

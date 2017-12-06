@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
+import {ViewChild} from '@angular/core';
+import { MatSort} from '@angular/material';
+
 
 @Component({
   selector: 'app-contract-list',
@@ -7,6 +10,7 @@ import {MatTableDataSource} from '@angular/material';
   styleUrls: ['./contract-list.component.css']
 })
 export class ContractListComponent  {
+  @ViewChild(MatSort) sort: MatSort;
 
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
@@ -15,6 +19,10 @@ export class ContractListComponent  {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+  }
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
   }
 
 }

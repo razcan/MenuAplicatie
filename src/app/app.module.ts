@@ -1,5 +1,8 @@
 import { AppComponent } from './app.component';
 import { ContractListComponent } from './contract-list/contract-list.component';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
@@ -32,17 +35,29 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
+import { ContractGeneralComponent } from './contract-general/contract-general.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContractListComponent
+    ContractListComponent,
+    ContractGeneralComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      {path: 'contract-list', component: ContractListComponent, pathMatch: 'full'}
+    ]),
+    RouterModule.forChild([
       {path: 'contract-list',
-      component: ContractListComponent}]),
+      children: [ {path: '', redirectTo: '/contract-general', pathMatch: 'full'},
+          { path: 'contract-general',
+            component: ContractGeneralComponent,
+          },
+        ]
+      }
+    ]),
     MatStepperModule,
     MatIconModule,
     MatInputModule,
@@ -100,4 +115,5 @@ import {
 })
 export class AppModule { }
 
-export const routingComponents =  [ContractListComponent];
+export const routingComponents =  [ContractListComponent, ContractGeneralComponent];
+

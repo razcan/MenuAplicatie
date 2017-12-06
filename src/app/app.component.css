@@ -13,14 +13,25 @@
     padding: 10px;
   }
   mat-sidenav {
-    width: 200px;
+    width: 250px;
     background: rgb(129, 129, 129);
   }
   mat-toolbar {
     background: rgb(179, 220, 235);
    
   }
-
+  mat-expansion-panel-header {
+    background: rgb(129, 129, 129);
+  }
+  #Icon {
+      padding-right: 10px;
+  }
+  #Submenu {
+    background: rgb(214, 212, 212);
+  }
+  /* mat-panel-title {
+      padding-left: 10px;
+  } */
 
   /*
     DEMO STYLE
@@ -82,8 +93,8 @@ i, span {
 }
 
 #sidebar {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 250px;
+    max-width: 250px;
     background:  rgb(129, 129, 129);;
     color: rgb(255, 255, 255);
     transition: all 0.1s;

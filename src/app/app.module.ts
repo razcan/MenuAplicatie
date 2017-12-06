@@ -6,6 +6,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {
   MatIconModule,
   MatInputModule,
@@ -62,6 +63,7 @@ import { AppComponent } from './app.component';
     MatTooltipModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatButtonToggleModule,
   ],
   exports: [
 
@@ -88,6 +90,7 @@ import { AppComponent } from './app.component';
     MatTooltipModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,8 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContractListComponent } from './contract-list/contract-list.component';
+import { ModalModule } from 'ngx-modialog';
+import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
@@ -50,6 +52,8 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     BrowserModule,
     FormsModule,
     HttpModule,
+    ModalModule.forRoot(),
+    BootstrapModalModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: 'contract-list', component: ContractListComponent, pathMatch: 'full'}

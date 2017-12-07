@@ -14,8 +14,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {
   MatIconModule,
@@ -69,6 +70,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
       }
     ]),
     MatStepperModule,
+    MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
@@ -95,7 +97,6 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     MatDatepickerModule,
   ],
   exports: [
-
     MatStepperModule,
     MatIconModule,
     MatInputModule,
@@ -121,6 +122,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     MatExpansionModule,
     MatButtonToggleModule,
     MatDatepickerModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

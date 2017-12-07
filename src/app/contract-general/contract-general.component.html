@@ -4,8 +4,7 @@
         <button (click)="onClick()">Alert</button>
 </div> -->
 <form>
-
-   <h4> Date Generale Contract </h4>
+   <h4 style="padding-left: 20px"> Date Generale Contract </h4>
         <hr class="half-rule">
 
     <table style="width: 100%" cellspacing="20">
@@ -44,6 +43,13 @@
     </table>
     <p>
 
-
-
+  
 </form>
+
+<mat-form-field class="example-full-width">
+        <input matInput  [matDatepicker]="picker" placeholder="Choose a date" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+      

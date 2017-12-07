@@ -1,4 +1,6 @@
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContractListComponent } from './contract-list/contract-list.component';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
@@ -46,6 +48,9 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: 'contract-list', component: ContractListComponent, pathMatch: 'full'}
     ]),

@@ -1,76 +1,49 @@
-
-
-<div>
+<!-- <div>
         <h1>ngx-modialog demo - version 4.x.x</h1>
         <h2>{{name}}</h2>
         <button (click)="onClick()">Alert</button>
-</div>
-
-
+</div> -->
 <form>
-        <div class="form-row">
-               Date Generale Contract
-        </div>
-    <div class="form-row">
-            <hr class="half-rule"/>
-    </div>
 
-    <div class="form-row">
-      <div class="form-group col-md-2">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
+   <h4> Date Generale Contract </h4>
+        <hr class="half-rule">
 
-  
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>Partner 1</option>
-          <option>Partner 2</option>
-          <option>Partner 3</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Check me out
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
+    <table style="width: 100%" cellspacing="20">
+        <tr>
+                <mat-form-field>
+                        <mat-select placeholder="Tip Contract">
+                          <mat-option value="option">Furnizor</mat-option>
+                          <mat-option value="option">Client</mat-option>
+                        </mat-select>
+                </mat-form-field> 
+        </tr>    
+        
+        <tr>
+                <mat-form-field>
+                    <input matInput placeholder="Numar Contract">
+                </mat-form-field>
+            </tr>
+            <tr>
+                    <mat-form-field>
+                            <mat-select placeholder="Partener">
+                              <mat-option value="option1">Partener 1</mat-option>
+                              <mat-option value="option2">Client 1</mat-option>
+                              <mat-option value="option3">Persoana 2</mat-option>
+                            </mat-select>
+                    </mat-form-field> 
+            </tr>
+            <tr>
+                    <mat-form-field>
+                            <mat-select placeholder="Stare Document">
+                              <mat-option value="option1">Draft</mat-option>
+                              <mat-option value="option2">Validated</mat-option>
+                              <mat-option value="option3">Canceled</mat-option>
+                            </mat-select>
+                    </mat-form-field> 
+            </tr>
+    </table>
+    <p>
 
-  <form class="form-inline">
-        <label for="rg-from">Ab: </label>
-        <div class="form-group">
-          <input type="text" id="rg-from" name="rg-from" value="" class="form-control">
-        </div>
-        <!-- rest of form -->
-      </form>
 
-  <!-- Test for jquery implementation -->
-  <!-- 
-<h2>This is a heading</h2>
-<p>This is a paragraph.</p>
-<p id="test">This is another paragraph.</p> -->
 
+</form>

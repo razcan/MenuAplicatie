@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
 import {ViewChild} from '@angular/core';
 import { MatSort} from '@angular/material';
+import { MatCard } from '@angular/material';
 import {PageEvent} from '@angular/material';
 import { RouterModule, Routes, Router } from '@angular/router';
 

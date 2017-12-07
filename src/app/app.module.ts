@@ -38,6 +38,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatStepperModule,
+  MatDatepickerModule,
 } from '@angular/material';
 import { ContractGeneralComponent } from './contract-general/contract-general.component';
 
@@ -91,6 +92,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     BrowserAnimationsModule,
     MatExpansionModule,
     MatButtonToggleModule,
+    MatDatepickerModule,
   ],
   exports: [
 
@@ -118,6 +120,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     BrowserAnimationsModule,
     MatExpansionModule,
     MatButtonToggleModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

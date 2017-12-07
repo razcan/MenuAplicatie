@@ -4,3 +4,30 @@
     overflow: hidden;
     background-color: #e5e5e5;
  }
+
+ .example-form {
+    min-width: 350px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    width: 20%; 
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+

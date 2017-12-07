@@ -6,11 +6,12 @@ import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule, Modal, bootstrap4Mode } from 'ngx-modialog/plugins/bootstrap';
 import { ViewContainerRef } from '@angular/core';
 import { Overlay } from 'ngx-modialog';
-
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-contract-general',
-  template: `<button (click)="onClick()">Alert</button>`,
+  // template: `<button (click)="onClick()">Alert</button>`,
+  templateUrl: './contract-general.component.html',
   styleUrls: ['./contract-general.component.css']
 })
 export class ContractGeneralComponent {

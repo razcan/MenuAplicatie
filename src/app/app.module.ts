@@ -19,6 +19,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {
+  MatCardModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -70,6 +71,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
       }
     ]),
     MatStepperModule,
+    MatCardModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
@@ -98,6 +100,7 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
   ],
   exports: [
     MatStepperModule,
+    MatCardModule,
     MatIconModule,
     MatInputModule,
     MatListModule,

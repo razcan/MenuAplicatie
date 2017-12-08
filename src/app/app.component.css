@@ -24,6 +24,9 @@
     background: rgb(235, 235, 235);
     
   }
+  mat-sidenav-content {
+    background: rgb(129, 129, 129);
+  }
   #Icon {
       padding-right: 10px;
   }
@@ -149,7 +152,7 @@ i, span {
 
 #sidebar .sidebar-header {
     padding: 4px;
-    background:   rgb(129, 129, 129);;
+    background:   rgb(129, 129, 129);
     
     text-align: center;
 }

@@ -1,55 +1,247 @@
-<!-- <div>
-        <h1>ngx-modialog demo - version 4.x.x</h1>
-        <h2>{{name}}</h2>
-        <button (click)="onClick()">Alert</button>
-</div> -->
+
+<br>
 <form>
-   <h4 style="padding-left: 20px"> Date Generale Contract </h4>
-        <hr class="half-rule">
+<div class="container-fluid" id="container">
+        <div class="row">
 
-    <table style="width: 100%" cellspacing="20">
-        <tr>
-                <mat-form-field>
-                        <mat-select placeholder="Tip Contract">
-                          <mat-option value="option">Furnizor</mat-option>
-                          <mat-option value="option">Client</mat-option>
-                        </mat-select>
-                </mat-form-field> 
-        </tr>    
-        
-        <tr>
-                <mat-form-field>
-                    <input matInput placeholder="Numar Contract">
-                </mat-form-field>
-            </tr>
-            <tr>
-                    <mat-form-field>
-                            <mat-select placeholder="Partener">
-                              <mat-option value="option1">Partener 1</mat-option>
-                              <mat-option value="option2">Client 1</mat-option>
-                              <mat-option value="option3">Persoana 2</mat-option>
-                            </mat-select>
-                    </mat-form-field> 
-            </tr>
-            <tr>
-                    <mat-form-field>
-                            <mat-select placeholder="Stare Document">
-                              <mat-option value="option1">Draft</mat-option>
-                              <mat-option value="option2">Validated</mat-option>
-                              <mat-option value="option3">Canceled</mat-option>
-                            </mat-select>
-                    </mat-form-field> 
-            </tr>
-    </table>
-    <p>
+                <div class="col-sm-12">
+                        <div class="row">
+                                <div class="col-sm-1">
 
-  
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="CCost">Centru de Cost</label>
+                                        <select class="form-control" id="CCost">
+                                                <option>Administrativ</option>
+                                                <option>Financiar</option>
+                                                <option>Operational</option>
+                                                <option>IT</option>
+                                                <option>Productie</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-1">
+                                </div>
+                                <div class="col-sm-5">
+                                        <label for="CCost">Denumire Contract</label>
+                                        <input type="text" class="form-control" id="CCost" placeholder="Introduceti denumire contractului">
+                                </div>
+                                <div class="col-sm-1">
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="CodContr">Denumire Contract</label>
+                                        <input type="text" class="form-control" id="CodContr" placeholder="Introduceti codul contract">
+                                </div>
+
+                        </div>
+                        <div class="row">
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="NrCtr">Nr. Contract</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Introduceti nr. contractului">
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="example-date-input" class="col-2 col-form-label">Data Contract</label>
+                                        <div class="col-10">
+                                                <input class="form-control" type="date" id="DataCtr">
+                                        </div>
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="StatusCtr">Status Contract</label>
+                                        <select class="form-control" id="StatusCtr">
+                                                <option>Initiat</option>
+                                                <option>Analiza</option>
+                                                <option>In vigoare</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-1">
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="StatusCtr">Stare Contract</label>
+                                        <select class="form-control" id="StatusCtr">
+                                                <option>Draft</option>
+                                                <option>Validat</option>
+                                                <option>Anulat</option>
+                                        </select>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+</div>
+
+<br>
+
+<div class="container-fluid" id="container">
+        <div class="row">
+
+                <div class="col-sm-12">
+                        <div class="row">
+                                <div class="col-sm-1"> </div>
+                                <div class="col-sm-2">
+                                        <label for="CategCtr">Categorie Contract</label>
+                                        <select class="form-control" id="StatusCtr">
+                                                <option>Servicii</option>
+                                                <option>Mentenanta</option>
+                                                <option>Consultanta</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-1"> </div>
+                                <div class="col-sm-2">
+                                        <label for="DepResp">Departament Responsabil</label>
+                                        <select class="form-control" id="DepResp">
+                                                <option>Dep. Tehnic</option>
+                                                <option>Dep. IT</option>
+                                                <option>Dep. Comercial</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-1"> </div>
+                                <div class="col-sm-2">
+                                        <label for="CategCtr">Tip Cheltuiala/Venit</label>
+                                        <select class="form-control" id="StatusCtr">
+                                                <option>Cheltuieli cu PSI</option>
+                                                <option>Cheltuieli IT</option>
+                                                <option>Venituri Chirii</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-1"> </div>
+                                <div class="col-sm-2">
+                                        <label for="CategCtr">Linie CashFlow</label>
+                                        <select class="form-control" id="StatusCtr">
+                                                <option>Plati Mentenanta</option>
+                                                <option>Plati PSI</option>
+                                                <option>Incasari Chirii</option>
+                                        </select>
+                                </div>
+                        </div>
+                        <div clas="row">
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="example-date-input" class="col-2 col-form-label">Data Contract</label>
+                                        <div class="col-10">
+                                                <input class="form-control" type="date" id="DataCtr">
+                                        </div>
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="example-date-input" class="col-2 col-form-label">Data Start Contract</label>
+                                        <div class="col-10">
+                                                <input class="form-control" type="date" id="DataStartCtr">
+                                        </div>
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="example-date-input" class="col-2 col-form-label">Data Final Contract</label>
+                                        <div class="col-10">
+                                                <input class="form-control" type="date" id="DataFinalCtr">
+                                        </div>
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                        <label for="example-date-input" class="col-2 col-form-label">Data Incetare Contract</label>
+                                        <div class="col-10">
+                                                <input class="form-control" type="date" id="DataIncetareCtr">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                        
+                                        <div class="col-sm-12">
+                                                <div class="row">
+                                                        <div class="col-sm-1"><div>
+                                                                        <button (click)="onClick()">Adauga Adresa</button>
+                                                                </div>
+                                                                
+                                                                 </div>
+                                                        <div class="col-sm-2">
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                
+                                                                
+</div>
+
+
+
+<br>
+
+<div class="container-fluid" id="container">
+        <div class="row">
+
+                <div class="col-sm-12">
+                        <div class="row">
+
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Nume Responsabil Partener</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Nume Responsabil Partener">
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Nume Responsabil Intern</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Nume Responsabil Intern">
+                                </div>
+                        </div>
+                        <div class="row">
+
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Email Responsabil Partener</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Email Responsabil Partener">
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Email Responsabil Intern</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Email Responsabil Intern">
+                                </div>
+                        </div>
+                        <div class="row">
+
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Telefon. Responsabil Partener</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Telefon. Responsabil Partener">
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                        <label for="NrCtr">Telefon. Responsabil Intern</label>
+                                        <input type="text" class="form-control" id="NrCtr" placeholder="Telefon. Responsabil Intern">
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+<br>
+
+<div class="container-fluid">
+                <div class="row">
+                <button class="btn-info">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Inapoi</button>
+
+        <button class="btn-success">
+                        Inainte
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+                        </div>
+       
+</div>
 </form>
-
-<mat-form-field class="example-full-width">
-        <input matInput  [matDatepicker]="picker" placeholder="Choose a date" >
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      
-      

@@ -2,11 +2,10 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContractListComponent } from './contract-list/contract-list.component';
-import { ModalModule } from 'ngx-modialog';
-import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
+import * as $ from 'jquery';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
@@ -18,6 +17,8 @@ import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ModalModule } from 'ngx-bootstrap';
+
 import {
   MatCardModule,
   MatIconModule,
@@ -43,7 +44,6 @@ import {
   MatDatepickerModule,
 } from '@angular/material';
 import { ContractGeneralComponent } from './contract-general/contract-general.component';
-import { AdaugaAdresaComponent } from './adauga-adresa/adauga-adresa.component';
 import { AdaugaAdreseComponent } from './contract-general/adauga-adrese/adauga-adrese.component';
 
 
@@ -52,15 +52,13 @@ import { AdaugaAdreseComponent } from './contract-general/adauga-adrese/adauga-a
     AppComponent,
     ContractListComponent,
     ContractGeneralComponent,
-    AdaugaAdresaComponent,
     AdaugaAdreseComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ModalModule.forRoot(),
-    BootstrapModalModule,
+    ModalModule.forRoot(),  
     RouterModule.forRoot([
       {path: 'contract-list', component: ContractListComponent, pathMatch: 'full'},
     ]),
@@ -132,11 +130,12 @@ import { AdaugaAdreseComponent } from './contract-general/adauga-adrese/adauga-a
     MatButtonToggleModule,
     MatDatepickerModule,
     MatButtonModule,
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
-export const routingComponents =  [ContractListComponent, ContractGeneralComponent, AdaugaAdresaComponent, AdaugaAdreseComponent];
+export const routingComponents =  [ContractListComponent, ContractGeneralComponent, AdaugaAdreseComponent];
 

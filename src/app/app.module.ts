@@ -86,8 +86,19 @@ import { ContractHistoryComponent } from './modul-contracte/contract-history/con
             component: ContractGeneralComponent,
           },
         ]
-      }
+      },
+      {path : 'modul-contracte/contract-list/contract-general',
+      children: [
+        { path: 'contract-financial', component: ContractFinancialComponent, pathMatch: 'full'}]
+    },
+    {path : 'modul-contracte/contract-list/contract-general',
+    children: [
+      { path: 'contract-alerts', component: ContractAlertsComponent, pathMatch: 'full'}]
+  },
     ]),
+    // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-list/contract-general'
+    // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-financial'
+
     MatStepperModule,
     MatCardModule,
     MatButtonModule,
@@ -150,5 +161,12 @@ import { ContractHistoryComponent } from './modul-contracte/contract-history/con
 })
 export class AppModule { }
 
-export const routingComponents =  [ContractListComponent, ContractGeneralComponent];
-
+export const routingComponents =
+[ContractListComponent,
+  ContractGeneralComponent,
+  ContractFinancialComponent,
+  ModulContracteComponent,
+  ContractDocumentsComponent,
+  ContractTasksComponent,
+  ContractAlertsComponent,
+  ContractHistoryComponent];

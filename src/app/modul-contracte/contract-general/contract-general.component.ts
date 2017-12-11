@@ -11,17 +11,12 @@ import {MatButtonModule} from '@angular/material';
 import {FormControl } from '@angular/forms';
 import { TabsModule } from 'ngx-bootstrap';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contract-general',
   templateUrl: './contract-general.component.html',
   styleUrls: ['./contract-general.component.css']
 })
-export class ContractGeneralComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ContractGeneralComponent {
 }

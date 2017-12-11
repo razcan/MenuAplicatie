@@ -6,7 +6,7 @@ import { ModalModule } from 'ngx-modialog';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsDatepickerModule } from 'ngx-bootstrap';
-import { BootstrapModalModule  } from 'ngx-modialog/plugins/bootstrap';
+import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { TabsModule } from 'ngx-bootstrap';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
@@ -15,13 +15,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatButtonModule} from '@angular/material/button';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {
   MatCardModule,
   MatIconModule,
@@ -77,24 +77,43 @@ import { ContractHistoryComponent } from './modul-contracte/contract-history/con
     BsDatepickerModule.forRoot(),
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      {path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full'}
+      { path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full' }
     ]),
     RouterModule.forChild([
-      {path: 'modul-contracte/contract-list',
-      children: [ {path: 'contract-general', component: ContractGeneralComponent, pathMatch: 'full'},
-          { path: 'contract-general',
-            component: ContractGeneralComponent,
-          },
+      {
+        path: 'modul-contracte/contract-list',
+        children: [{ path: 'contract-general', component: ContractGeneralComponent, pathMatch: 'full' },
+        {
+          path: 'contract-general',
+          component: ContractGeneralComponent,
+        },
         ]
       },
-      {path : 'modul-contracte/contract-list/contract-general',
-      children: [
-        { path: 'contract-financial', component: ContractFinancialComponent, pathMatch: 'full'}]
-    },
-    {path : 'modul-contracte/contract-list/contract-general',
-    children: [
-      { path: 'contract-alerts', component: ContractAlertsComponent, pathMatch: 'full'}]
-  },
+      {
+        path: 'modul-contracte/contract-list/contract-general',
+        children: [
+          { path: 'contract-financial', component: ContractFinancialComponent, pathMatch: 'full' }]
+      },
+      {
+        path: 'modul-contracte/contract-list/contract-general',
+        children: [
+          { path: 'contract-alerts', component: ContractAlertsComponent, pathMatch: 'full' }]
+      },
+      {
+        path: 'modul-contracte/contract-list/contract-general',
+        children: [
+          { path: 'contract-documents', component: ContractDocumentsComponent, pathMatch: 'full' }]
+      },
+      {
+        path: 'modul-contracte/contract-list/contract-general',
+        children: [
+          { path: 'contract-history', component: ContractHistoryComponent, pathMatch: 'full' }]
+      },
+      {
+        path: 'modul-contracte/contract-list/contract-general',
+        children: [
+          { path: 'contract-tasks', component: ContractTasksComponent, pathMatch: 'full' }]
+      },
     ]),
     // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-list/contract-general'
     // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-financial'
@@ -162,11 +181,11 @@ import { ContractHistoryComponent } from './modul-contracte/contract-history/con
 export class AppModule { }
 
 export const routingComponents =
-[ContractListComponent,
-  ContractGeneralComponent,
-  ContractFinancialComponent,
-  ModulContracteComponent,
-  ContractDocumentsComponent,
-  ContractTasksComponent,
-  ContractAlertsComponent,
-  ContractHistoryComponent];
+  [ContractListComponent,
+    ContractGeneralComponent,
+    ContractFinancialComponent,
+    ModulContracteComponent,
+    ContractDocumentsComponent,
+    ContractTasksComponent,
+    ContractAlertsComponent,
+    ContractHistoryComponent];

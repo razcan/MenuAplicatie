@@ -1,0 +1,39 @@
+label{
+    text-align: left;
+  }
+  
+  form {
+    height: 800px;
+  }
+  #container {
+    background-color: #ffffff;
+  }
+  
+    body {
+      background: black;
+    }
+    
+    .col-sm-1   {
+      height: 70px;
+      text-align: right;
+    }
+     .col-sm-2 {
+      height: 70px;
+      text-align: right;
+    }
+     .col-sm-5  {
+      height: 70px;
+      position:relative;
+      text-align:center;
+    }
+    .col-sm-4  {
+      height: 70px;
+      position:relative;
+      text-align:center;
+    }
+    .col-sm-10  {
+      height: 70px;
+      position:relative;
+      text-align:center;
+    }
+  

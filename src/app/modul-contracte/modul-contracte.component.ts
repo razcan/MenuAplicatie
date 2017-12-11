@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-modul-contracte',
   templateUrl: './modul-contracte.component.html',
   styleUrls: ['./modul-contracte.component.css']
 })
-export class ModulContracteComponent implements OnInit {
+export class ModulContracteComponent  {
 
-  constructor() { }
+  constructor(public router: Router) {}
 
-  ngOnInit() {
-  }
+    navigateOnParentGen() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general']);
+    }
+    navigateOnParentDoc() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-documents']);
+    }
+    navigateOnParentTask() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-tasks']);
+    }
+    navigateOnParentAlert() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-alerts']);
+    }
+    navigateOnParentHist() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-history']);
+    }
+    navigateOnParentFin() {
+      this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-financial']);
+    }
 
 }

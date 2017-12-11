@@ -76,7 +76,8 @@ import { ModalModule } from 'ngx-bootstrap';
     BsDatepickerModule.forRoot(),
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      { path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full' }
+      { path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full' },
+      { path: 'modul-contracte/contract-list/contract-general', component: ContractGeneralComponent, pathMatch: 'full' }
     ]),
     RouterModule.forChild([
       {
@@ -114,9 +115,6 @@ import { ModalModule } from 'ngx-bootstrap';
           { path: 'contract-tasks', component: ContractTasksComponent, pathMatch: 'full' }]
       },
     ]),
-    // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-list/contract-general'
-    // Segment: 'modul-contracte/contract-list/contract-general/modul-contracte/contract-financial'
-
     MatStepperModule,
     MatCardModule,
     MatButtonModule,

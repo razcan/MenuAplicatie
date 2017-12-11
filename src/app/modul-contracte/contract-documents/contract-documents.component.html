@@ -1,27 +1,22 @@
 <ul class="nav nav-pills">
-    <li role="presentation">
-            <a> General</a>
-    </li>
-    <li role="presentation">
-            <a> Financiar</a>
-    </li>
-    <li role="presentation" class="active">
-            <a>Documente</a>
-    </li>
-    <li role="presentation">
-            <a>Task</a>
-    </li>
-    <li role="presentation">
-            <a>Istoric</a>
-    </li>
-    <li role="presentation">
-            <a> Alerte</a>
-    </li>
-</ul>
-
-<button (click)="navigateOnParentGen()">General</button>
-<button (click)="navigateOnParentDoc()">Document</button>
-<button (click)="navigateOnParentTask()">Task</button>
-<button (click)="navigateOnParentAlert()">Alerte</button>
-<button (click)="navigateOnParentHist()">Istoric</button>
-<button (click)="navigateOnParentFin()">Financiar</button>
+        <li role="presentation">
+                <a (click)="navigateOnParentGen()"> General</a>
+        </li>
+        <li role="presentation">
+                <a (click)="navigateOnParentFin()"> Financiar</a>
+        </li>
+        <li role="presentation" class="active">
+            <a (click)="navigateOnParentDoc()">Documente</a>
+        </li>
+        <li role="presentation">
+                <a (click)="navigateOnParentTask()">Task</a>
+        </li>
+        <li role="presentation">
+                <a (click)="navigateOnParentHist()">Istoric</a>
+        </li>
+        <li role="presentation">
+                <a (click)="navigateOnParentAlert()">  Alerte</a>
+        </li>
+    </ul>
+    
+    

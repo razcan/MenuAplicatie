@@ -52,11 +52,11 @@
 
                                   </div>
                                   <div class="col-sm-2">
-                                          <label for="example-date-input" class="col-2 col-form-label">Data Contract</label>
-                                          <div class="col-10">
-                                                  <input class="form-control" type="date" id="DataCtr">
-                                          </div>
-                                  </div>
+                                                <label for="example-date-input" class="col-2 col-form-label">Data Contract</label>
+                                                <div class="col-10">
+                                                        <input class="form-control" type="date" id="DataCtr">
+                                                </div>
+                                        </div>
                                   <div class="col-sm-1">
 
                                   </div>
@@ -286,3 +286,49 @@
 
   </div>
 </form>
+
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Adauga Adresa</button>
+
+<ng-template #template>
+ <div class="modal-header">
+   <h4 class="modal-title pull-left">Introduceti Adresa</h4>
+   <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+ <div class="modal-body">
+
+  <div>
+    <label for="NrCtr">Tara</label>
+    <input type="text" class="form-control" id="NrCtr" placeholder="Tara">
+</div>
+<div>
+  <label for="NrCtr">Judet</label>
+  <input type="text" class="form-control" id="NrCtr" placeholder="Judet">
+</div>
+<div>
+  <label for="NrCtr">Oras</label>
+  <input type="text" class="form-control" id="NrCtr" placeholder="Oras">
+</div>
+<div>
+  <label for="NrCtr">Strada</label>
+  <input type="text" class="form-control" id="NrCtr" placeholder="Strada">
+</div>
+<div>
+  <label for="NrCtr">Numar</label>
+  <input type="text" class="form-control" id="NrCtr" placeholder="Numar">
+</div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+            <button class="btn btn-primary">
+                    <span></span>Salveaza</button>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+
+</div>
+
+</ng-template>

@@ -2,7 +2,6 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContractListComponent } from './modul-contracte/contract-list/contract-list.component';
-import { ModalModule } from 'ngx-modialog';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsDatepickerModule } from 'ngx-bootstrap';
@@ -53,7 +52,7 @@ import { ContractDocumentsComponent } from './modul-contracte/contract-documents
 import { ContractTasksComponent } from './modul-contracte/contract-tasks/contract-tasks.component';
 import { ContractAlertsComponent } from './modul-contracte/contract-alerts/contract-alerts.component';
 import { ContractHistoryComponent } from './modul-contracte/contract-history/contract-history.component';
-
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [

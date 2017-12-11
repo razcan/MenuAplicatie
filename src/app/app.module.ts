@@ -1,9 +1,13 @@
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ContractListComponent } from './contract-list/contract-list.component';
+import { ContractListComponent } from './modul-contracte/contract-list/contract-list.component';
 import { ModalModule } from 'ngx-modialog';
-import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsDatepickerModule } from 'ngx-bootstrap';
+import { BootstrapModalModule  } from 'ngx-modialog/plugins/bootstrap';
+import { TabsModule } from 'ngx-bootstrap';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
@@ -42,7 +46,13 @@ import {
   MatStepperModule,
   MatDatepickerModule,
 } from '@angular/material';
-import { ContractGeneralComponent } from './contract-general/contract-general.component';
+import { ContractGeneralComponent } from './modul-contracte/contract-general/contract-general.component';
+import { ModulContracteComponent } from './modul-contracte/modul-contracte.component';
+import { ContractFinancialComponent } from './modul-contracte/contract-financial/contract-financial.component';
+import { ContractDocumentsComponent } from './modul-contracte/contract-documents/contract-documents.component';
+import { ContractTasksComponent } from './modul-contracte/contract-tasks/contract-tasks.component';
+import { ContractAlertsComponent } from './modul-contracte/contract-alerts/contract-alerts.component';
+import { ContractHistoryComponent } from './modul-contracte/contract-history/contract-history.component';
 
 
 @NgModule({
@@ -50,20 +60,28 @@ import { ContractGeneralComponent } from './contract-general/contract-general.co
     AppComponent,
     ContractListComponent,
     ContractGeneralComponent,
+    ModulContracteComponent,
+    ContractFinancialComponent,
+    ContractDocumentsComponent,
+    ContractTasksComponent,
+    ContractAlertsComponent,
+    ContractHistoryComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ModalModule.forRoot(),
     BootstrapModalModule,
+    TabsModule.forRoot(),
+    ModalModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      {path: 'contract-list', component: ContractListComponent, pathMatch: 'full'}
+      {path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full'}
     ]),
     RouterModule.forChild([
-      {path: 'contract-list',
-      children: [ {path: '', redirectTo: '/contract-general', pathMatch: 'full'},
+      {path: 'modul-contracte/contract-list',
+      children: [ {path: 'contract-general', component: ContractGeneralComponent, pathMatch: 'full'},
           { path: 'contract-general',
             component: ContractGeneralComponent,
           },

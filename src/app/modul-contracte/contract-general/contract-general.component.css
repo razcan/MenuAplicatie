@@ -1,7 +1,18 @@
+.example-full-width {
+min-width: 450px;
+max-width: 1500px;
+width: 800%;
+}
 label{
   text-align: left;
+  font-size: 80%;
 }
-
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: blue;
+}
 form {
   height: 800px;
 }
@@ -13,26 +24,30 @@ form {
     background: black;
   }
   
+  input {
+    font-size: 90%;
+  }
   .col-sm-1   {
-    height: 70px;
+    height: 60px;
     text-align: right;
+    
   }
    .col-sm-2 {
-    height: 70px;
+    height: 60px;
     text-align: right;
   }
    .col-sm-5  {
-    height: 70px;
+    height: 60px;
     position:relative;
     text-align:center;
   }
   .col-sm-4  {
-    height: 70px;
+    height: 60px;
     position:relative;
     text-align:center;
   }
   .col-sm-10  {
-    height: 70px;
+    height: 60px;
     position:relative;
     text-align:center;
   }

@@ -55,6 +55,16 @@ import { ContractHistoryComponent } from './modul-contracte/contract-history/con
 import { ModalModule } from 'ngx-bootstrap';
 import { SubmenuContractService } from './services/submenu-contract.service';
 
+export const appRoutes: Routes = [
+  { path: 'contract-list', component: ContractListComponent},
+  { path: 'contract-general',      component: ContractGeneralComponent },
+                { path: 'contract-financial',      component: ContractFinancialComponent  },
+                { path: 'contract-documents', component: ContractDocumentsComponent },
+                { path: 'contract-tasks',      component: ContractTasksComponent },
+                { path: 'contract-history',      component: ContractHistoryComponent  },
+                { path: 'contract-alerts',      component: ContractTasksComponent },
+              ]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,46 +86,7 @@ import { SubmenuContractService } from './services/submenu-contract.service';
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
     NgbModule.forRoot(),
-    RouterModule.forRoot([
-      { path: 'modul-contracte/contract-list', component: ContractListComponent, pathMatch: 'full' },
-      { path: 'modul-contracte/contract-list/contract-general', component: ContractGeneralComponent, pathMatch: 'full' }
-    ]),
-    RouterModule.forChild([
-      {
-        path: 'modul-contracte/contract-list',
-        children: [{ path: 'contract-general', component: ContractGeneralComponent, pathMatch: 'full' },
-        {
-          path: 'contract-general',
-          component: ContractGeneralComponent,
-        },
-        ]
-      },
-      {
-        path: 'modul-contracte/contract-list/contract-general',
-        children: [
-          { path: 'contract-financial', component: ContractFinancialComponent, pathMatch: 'full' }]
-      },
-      {
-        path: 'modul-contracte/contract-list/contract-general',
-        children: [
-          { path: 'contract-alerts', component: ContractAlertsComponent, pathMatch: 'full' }]
-      },
-      {
-        path: 'modul-contracte/contract-list/contract-general',
-        children: [
-          { path: 'contract-documents', component: ContractDocumentsComponent, pathMatch: 'full' }]
-      },
-      {
-        path: 'modul-contracte/contract-list/contract-general',
-        children: [
-          { path: 'contract-history', component: ContractHistoryComponent, pathMatch: 'full' }]
-      },
-      {
-        path: 'modul-contracte/contract-list/contract-general',
-        children: [
-          { path: 'contract-tasks', component: ContractTasksComponent, pathMatch: 'full' }]
-      },
-    ]),
+    RouterModule.forRoot(appRoutes),
     MatStepperModule,
     MatCardModule,
     MatButtonModule,
@@ -179,12 +150,3 @@ import { SubmenuContractService } from './services/submenu-contract.service';
 })
 export class AppModule { }
 
-export const routingComponents =
-  [ContractListComponent,
-    ContractGeneralComponent,
-    ContractFinancialComponent,
-    ModulContracteComponent,
-    ContractDocumentsComponent,
-    ContractTasksComponent,
-    ContractAlertsComponent,
-    ContractHistoryComponent];

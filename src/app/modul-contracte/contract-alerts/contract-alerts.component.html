@@ -1,22 +1,20 @@
 <ul class="nav nav-pills">
-        <li role="presentation">
-                <a   (click)="butonGeneral()"> General</a>
+        <li role="presentation" >
+                <a routerLink="/contract-general"> General</a>
+        </li>
+        <li role="presentation" >
+                <a routerLink="/contract-financial"> Financiar</a>
         </li>
         <li role="presentation">
-                <a   (click)=navigateOnParentFin()> Financiar</a>
+                <a routerLink="/contract-documents">Documente</a>
         </li>
         <li role="presentation">
-            <a   (click)="navigateOnParentDoc()">Documente</a>
+                <a routerLink="/contract-tasks">Task</a>
         </li>
         <li role="presentation">
-                <a   (click)="navigateOnParentTask()">Task</a>
+                <a routerLink="/contract-history">Istoric</a>
         </li>
-        <li role="presentation">
-                <a   (click)="navigateOnParentHist()">Istoric</a>
+        <li role="presentation" class="active" >
+                <a routerLink="/contract-alerts"> Alerte</a>
         </li>
-        <li role="presentation" class="active">
-                <a   (click)="navigateOnParentAlert()">  Alerte</a>
-        </li>
-    </ul>
-    
-    
+</ul>

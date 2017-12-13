@@ -18,6 +18,7 @@
                 <a routerLink="contract-alerts"> Alerte</a>
         </li>
 </ul>
+
 <form>
         <div class="container-fluid" id="container">
 
@@ -26,16 +27,18 @@
                         <div class="col-sm-12">
                                 <div class="row">
                                         <div class="col-sm-1"></div>
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-2 ">
+                                                
                                                         <label for="Partener">Partener</label>
-                                                        <select class="form-control input-sm" id="Partener">
+                                                        <select class="form-control input-sm" id="Partener" [(ngModel)]="PartenerName" name="Partener">
                                                                 <option>Partener 1</option>
                                                                 <option>Partener 2</option>
                                                                 <option>Partener 3</option>
                                                         </select>
-                                                </div>
-                                                <div class="col-sm-1">
                                                         
+                                                
+                                                </div>
+                                                <div class="col-sm-1">{{PartenerName}}
                                                 </div>
                                                 <div class="col-sm-2">
                                                                 <label for="Partener">Tip Contract</label>
@@ -69,8 +72,9 @@
                                         </div>
                                         <div class="col-sm-5">
                                                 <label for="CCost">Denumire Contract</label>
-                                                <input type="text" class="form-control input-sm" id="CCost" placeholder="Introduceti denumire contractului">
+                                                <input  type="text"  class="form-control input-sm"  placeholder="Introduceti denumire contractului">
                                         </div>
+                                        
                                         <div class="col-sm-1">
                                         </div>
                                         <div class="col-sm-2">
@@ -356,8 +360,11 @@
 
         </div>
 </form>
-
-
+<br>
+<br>
+<br>
+<br>
+<button (click)="trimite()">Trimite</button>
 
 <ng-template #template>
         <div class="modal-header">

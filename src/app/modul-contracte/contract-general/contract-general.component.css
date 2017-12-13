@@ -1,12 +1,12 @@
-.example-full-width {
-min-width: 450px;
-max-width: 1500px;
-width: 800%;
+select  {
+  height: 30px;
+  width: 80%;
 }
-label{
-  text-align: left;
-  font-size: 80%;
+input  {
+  height: 30px;
+  width: 80%;
 }
+label {display:block; width:x; height:y; text-align:left;}
 a {
   color: #ffffff;
 }
@@ -24,9 +24,14 @@ form {
     background: black;
   }
   
-  input {
+  /* input {
     font-size: 90%;
+  } */
+  .radio {
+    height: 60px;
+    text-align: right;
   }
+
   .col-sm-1   {
     height: 60px;
     text-align: right;
@@ -38,18 +43,15 @@ form {
   }
    .col-sm-5  {
     height: 60px;
-    position:relative;
-    text-align:center;
+    text-align:right;
   }
   .col-sm-4  {
     height: 60px;
-    position:relative;
-    text-align:center;
+    text-align:right;
   }
   .col-sm-10  {
     height: 60px;
-    position:relative;
-    text-align:center;
+    text-align:right;
   }
 
 

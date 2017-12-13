@@ -53,6 +53,7 @@ import { ContractTasksComponent } from './modul-contracte/contract-tasks/contrac
 import { ContractAlertsComponent } from './modul-contracte/contract-alerts/contract-alerts.component';
 import { ContractHistoryComponent } from './modul-contracte/contract-history/contract-history.component';
 import { ModalModule } from 'ngx-bootstrap';
+import { SubmenuContractService } from './services/submenu-contract.service';
 
 @NgModule({
   declarations: [
@@ -67,8 +68,8 @@ import { ModalModule } from 'ngx-bootstrap';
     ContractHistoryComponent,
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     HttpModule,
     BootstrapModalModule,
     TabsModule.forRoot(),
@@ -171,8 +172,9 @@ import { ModalModule } from 'ngx-bootstrap';
     MatButtonToggleModule,
     MatDatepickerModule,
     MatButtonModule,
+    
   ],
-  providers: [],
+  providers: [SubmenuContractService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

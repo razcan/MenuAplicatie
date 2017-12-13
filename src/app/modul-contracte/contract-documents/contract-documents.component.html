@@ -1,22 +1,464 @@
 <ul class="nav nav-pills">
         <li role="presentation">
-                <a  (click)="navigateOnParentGen()"> General</a>
+                <a (click)="navigateOnParentGen()"> General</a>
         </li>
         <li role="presentation">
-                <a  (click)="navigateOnParentFin()"> Financiar</a>
+                <a (click)="navigateOnParentFin()"> Financiar</a>
         </li>
         <li role="presentation" class="active">
-            <a  (click)="navigateOnParentDoc()">Documente</a>
+                <a (click)="navigateOnParentDoc()">Documente</a>
         </li>
         <li role="presentation">
-                <a  (click)="navigateOnParentTask()">Task</a>
+                <a (click)="navigateOnParentTask()">Task</a>
         </li>
         <li role="presentation">
-                <a  (click)="navigateOnParentHist()">Istoric</a>
+                <a (click)="navigateOnParentHist()">Istoric</a>
         </li>
         <li role="presentation">
-                <a  (click)="navigateOnParentAlert()">  Alerte</a>
+                <a (click)="navigateOnParentAlert()"> Alerte</a>
         </li>
-    </ul>
-    
-    
+</ul>
+
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title main-color-bg"></h4>
+                <br>
+                <p class="card-text"></p>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Tip Contract</label>
+                  </div>
+                  <!-- <div class="form-group col-md-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div> -->
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Client/Furnizor
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Partner Name</label>
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div> -->
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Alege Partener
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    <button type="button" class="btn btn-warning">Adauga Partener</button>
+                  </div>
+
+
+
+                </div>
+                <br>
+                <div class="row">
+
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Contract No.</label>
+                  </div>
+                  <div class="form-group col-md-3">
+
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Contract Code</label>
+                  </div>
+                  <div class="form-group col-md-3">
+
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                </div>
+                <!-- </div> -->
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Signing Date</label>
+                      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                      <!-- <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div> -->
+
+
+                      <input class="form-control input-sm" type="date" id="DataCtr">
+
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Start Date</label>
+                      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                      <input class="form-control input-sm" type="date" id="DataCtr">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">End Date</label>
+                      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                      <input class="form-control input-sm" type="date" id="DataCtr">
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Contract Status</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </div> -->
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Contract Parinte</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Versiune</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Stare Contract</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Status Contract</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="container-fluid">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Denumire/Descriere Contract</label>
+                      <input type="text" class="form-control" id="exampleFormControlTextarea1">
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title main-color-bg"></h4>
+                <br>
+                <p class="card-text"></p>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Categorie Contract</label>
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div> -->
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Alege Categorie
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Departament</label>
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div> -->
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Alege Departament
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Tip Cheltuiala</label>
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div> -->
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      Alege Tip Cheltuiala
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Centru de Cost</label>
+                      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          Alege Centru de Cost
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Linie Cash Flow</label>
+                      <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          Alege Linie Cash Flow
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="exampleFormControlTextarea1">Prelungire automata</label>
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div> -->
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">DA</span>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">NU</span>
+                  </label>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="exampleFormControlTextarea1">Zile Notificare Prelungire</label>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="exampleFormControlTextarea1">Data Notificare Prelungire</label>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="container-fluid">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Obiecte Contract</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- <div class="card">
+            <div class="card-body">
+              <h4 class="card-title main-color-bg"></h4>
+              <p class="card-text"></p>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Contract Categories</label>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Choose Category
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Responsible Department</label>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Choose Department
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Income/Expense Categories</label>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Choose Inc/Exp Category
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Cost Center</label>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Choose Cost Center
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div> -->
+        </div>
+        <div class="row">
+          <div class="container-fluid">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Note</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <div class="card-body">
+            <h4 class="card-title main-color-bg"></h4>
+            <br>
+            <p class="card-text">CORRESPONDENCE INFORMATION</p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Name Internal Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">E-mail Internal Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">PhoneNmb. Internal Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Name Partner Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">E-mail Partner Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">PhoneNmb. Partner Resp.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="container-fluid">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Partner Address</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div> -->
+      </div>

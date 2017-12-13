@@ -24,9 +24,9 @@
     background: rgb(235, 235, 235);
     
   }
-  mat-sidenav-content {
-    background: rgb(129, 129, 129);
-  }
+    mat-sidenav-content {
+        background: rgb(129, 129, 129);
+    }
   #Icon {
       padding-right: 10px;
   }

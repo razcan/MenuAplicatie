@@ -15,6 +15,9 @@ import { Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { SubmenuContractService } from './../../services/submenu-contract.service';
 
 @Component({
   selector: 'app-contract-general',
@@ -34,9 +37,25 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 })
 export class ContractGeneralComponent {
   modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) {}
+  firstname;
+  PartenerName;
+  constructor(private modalService: BsModalService, private submenu: SubmenuContractService) {
+ 
+    
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
   }
+
+trimite(){
+  
+  this.submenu.ServPartenerName =this.PartenerName ;
+  console.log("Componenenta " + this.PartenerName);
+  console.log("Serviciu " + this.submenu.ServPartenerName);
+}
+  
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);  
+  }
+
+
+
 }

@@ -57,12 +57,12 @@ import { SubmenuContractService } from './services/submenu-contract.service';
 
 export const appRoutes: Routes = [
   { path: 'contract-list', component: ContractListComponent},
-  { path: 'contract-general',      component: ContractGeneralComponent },
-                { path: 'contract-financial',      component: ContractFinancialComponent  },
-                { path: 'contract-documents', component: ContractDocumentsComponent },
-                { path: 'contract-tasks',      component: ContractTasksComponent },
-                { path: 'contract-history',      component: ContractHistoryComponent  },
-                { path: 'contract-alerts',      component: ContractTasksComponent },
+  { path: 'contract-list/contract-general',      component: ContractGeneralComponent },
+                { path: 'contract-list/contract-financial',      component: ContractFinancialComponent  },
+                { path: 'contract-list/contract-documents', component: ContractDocumentsComponent },
+                { path: 'contract-list/contract-tasks',      component: ContractTasksComponent },
+                { path: 'contract-list/contract-history',      component: ContractHistoryComponent  },
+                { path: 'contract-list/contract-alerts',      component: ContractTasksComponent },
               ]
 
 @NgModule({

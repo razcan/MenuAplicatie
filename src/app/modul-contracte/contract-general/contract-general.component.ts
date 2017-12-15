@@ -18,11 +18,16 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { SubmenuContractService } from './../../services/submenu-contract.service';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+import {ViewEncapsulation} from '@angular/core';
+import {Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contract-general',
   templateUrl: './contract-general.component.html',
   styleUrls: ['./contract-general.component.css'],
+  encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('dialog', [
       transition('void => *', [
@@ -37,21 +42,46 @@ import { SubmenuContractService } from './../../services/submenu-contract.servic
 })
 export class ContractGeneralComponent {
   modalRef: BsModalRef;
-  firstname;
-  PartenerName;
+ 
+  PartenerName = [
+    {value: 'Partener 1', viewValue: 'Partener 1'},
+    {value: 'Partener 2', viewValue: 'Partener 2'},
+    {value: 'Partener 3', viewValue: 'Partener 3'}
+  ];
+  
+  ContractType = [
+    {value: 'Achizitie', viewValue: 'Achizitie'},
+    {value: 'Furnizare', viewValue: 'Furnizare'}
+];
+
+StatusContract = [
+  {value: 'Draft', viewValue: 'Draft'},
+  {value: 'Anulat', viewValue: 'Anulat'},
+  {value: 'Valid', viewValue: 'Valid'}
+];
+
+StateContract = [
+  {value: 'Initiat', viewValue: 'Initiat'},
+  {value: 'Analiza', viewValue: 'Analiza'}
+];
+
+email = new FormControl('', [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+        this.email.hasError('email') ? 'Not a valid email' :
+            '';
+  }
+
+date = new FormControl(new Date());
+serializedDate = new FormControl((new Date()).toISOString());
+
   constructor(private modalService: BsModalService, private submenu: SubmenuContractService) {
  
     
 
   }
 
-trimite(){
-  
-  this.submenu.ServPartenerName =this.PartenerName ;
-  console.log("Componenenta " + this.PartenerName);
-  console.log("Serviciu " + this.submenu.ServPartenerName);
-}
-  
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);  
   }

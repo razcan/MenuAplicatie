@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {
   MatCardModule,
   MatIconModule,
@@ -106,6 +107,7 @@ export const appRoutes: Routes = [
     MatSlideToggleModule,
     MatSnackBarModule,
     MatSortModule,
+    MatGridListModule,
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,

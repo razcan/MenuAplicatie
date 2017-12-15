@@ -19,393 +19,272 @@
         </li>
 </ul>
 
-<form>
-        <div class="container-fluid" id="container">
+<div>
 
-                <div class="row">
+        <mat-grid-list cols="12" rowHeight="3:1">
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+        </mat-grid-list>
 
-                        <div class="col-sm-12">
-                                <div class="row">
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-2 ">
-                                                
-                                                        <label for="Partener">Partener</label>
-                                                        <select class="form-control input-sm" id="Partener" [(ngModel)]="PartenerName" name="Partener">
-                                                                <option>Partener 1</option>
-                                                                <option>Partener 2</option>
-                                                                <option>Partener 3</option>
-                                                        </select>
-                                                        
-                                                
-                                                </div>
-                                                <div class="col-sm-1">{{PartenerName}}
-                                                </div>
-                                                <div class="col-sm-2">
-                                                                <label for="Partener">Tip Contract</label>
-                                                                <select class="form-control input-sm" id="Partener">
-                                                                        <option>Furnizare</option>
-                                                                        <option>Achizitie</option>
-                                                                </select>
-                                                        </div>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Partener
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <mat-select>
+                                <mat-option *ngFor="let partner of PartenerName" [value]="partner.value">
+                                        {{ partner.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                                </div>
-                        </div>
-                </div>
-                <div class="row">
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                        <div class="col-sm-12">
-                                <div class="row">
-                                        <div class="col-sm-1">
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Tip
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-select>
+                                <mat-option *ngFor="let type of ContractType" [value]="type.value">
+                                        {{ type.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="CCost">Centru de Cost</label>
-                                                <select class="form-control input-sm" id="CCost">
-                                                        <option>Administrativ</option>
-                                                        <option>Financiar</option>
-                                                        <option>Operational</option>
-                                                        <option>IT</option>
-                                                        <option>Productie</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1">
-                                        </div>
-                                        <div class="col-sm-5">
-                                                <label for="CCost">Denumire Contract</label>
-                                                <input  type="text"  class="form-control input-sm"  placeholder="Introduceti denumire contractului">
-                                        </div>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Numar
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-form-field>
+                                <input matInput>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Cod
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-form-field>
+                                <input matInput>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Data
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2">
+                        <mat-form-field>
+                                <input matInput [matDatepicker]="picker1">
+                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                </mat-grid-tile>
+                <mat-grid-tile colspan="10">
+
+                        <mat-form-field class="VerticalLine">
+                                <input matInput [matDatepicker]="picker4" placeholder="Data Start  ">
+                                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                <mat-datepicker #picker4></mat-datepicker>
+                        </mat-form-field>
+                        
+                        <mat-form-field class="VerticalLine">
+                                <input matInput [matDatepicker]="picker2" placeholder="Data Final  ">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field class="VerticalLine">
+                                <input matInput [matDatepicker]="picker3" placeholder="Durata">
+                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                <mat-datepicker #picker3></mat-datepicker>
+                        </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2">
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Stare
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-select>
+                                <mat-option *ngFor="let type of StateContract" [value]="type.value">
+                                        {{ type.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Status
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-select>
+                                <mat-option *ngFor="let type of StatusContract" [value]="type.value">
+                                        {{ type.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="12" rowHeight="3:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Denumire
+                </mat-grid-tile>
+                <mat-grid-tile colspan="4">
+                        <mat-form-field>
+                                <mat-form-field>
+                                        <textarea matInput></textarea>
+                                </mat-form-field>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                        <mat-grid-tile colspan="1">
+                        </mat-grid-tile>
+                        <mat-grid-tile colspan="1">
                                         
-                                        <div class="col-sm-1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="CodContr">Cod Contract</label>
-                                                <input type="text" class="form-control input-sm" id="CodContr" placeholder="Introduceti codul contract">
-                                        </div>
+                        </mat-grid-tile>
+                        <mat-grid-tile colspan="4">
+                                        Notificari :
+                        </mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="12" rowHeight="5:1">
+                                <mat-grid-tile>
+                                </mat-grid-tile>
+                        </mat-grid-list>
+                
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Adresa
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-form-field>
+                                <input matInput>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                                </div>
-                                <div class="row">
-                                        <div class="col-sm-1">
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Tel/Fax
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-form-field>
+                                <input matInput>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="NrCtr">Nr. Contract</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Introduceti nr. contractului">
-                                        </div>
-                                        <div class="col-sm-1">
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Email
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                                <mat-form-field>
+                                                <input matInput required>
+                                                
+                                              </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
 
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="StatusCtr">Stare Contract</label>
-                                                <select class="form-control input-sm" id="StatusCtr">
-                                                        <option>Draft</option>
-                                                        <option>Validat</option>
-                                                        <option>Anulat</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1">
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="StatusCtr">Status Contract</label>
-                                                <select class="form-control input-sm" id="StatusCtr">
-                                                        <option>Initiat</option>
-                                                        <option>Analiza</option>
-                                                        <option>In vigoare</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                        </div>
-                                </div>
-                                <div class="row">
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-2">
-                                                <label for="StatusCtr">Contract Parinte</label>
-                                                <select class="form-control input-sm" id="Contract Parinte">
-                                                        <option disabled></option>
-                                                        <option>Ctr 1/2016</option>
-                                                        <option>Ctr 12/2017</option>
-                                                        <option>Ctr 231/2017</option>
-                                                </select>
-
-                                        </div>
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-2">
-                                                <label for="NrCtr">Versiune </label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Introduceti ver. contractului">
-                                        </div>
-
-
-                                </div>
-
-                        </div>
-                </div>
-
-
-        </div>
-
-        <br>
-
-        <div class="container-fluid" id="container">
-                <div class="row">
-                        <div class="col-sm-12">
-                                <div class="row">
-                                        <div class="col-sm-1"> </div>
-                                        <div class="col-sm-2">
-                                                <label for="CategCtr">Categorie Contract</label>
-                                                <select class="form-control input-sm" id="StatusCtr">
-                                                        <option>Servicii</option>
-                                                        <option>Mentenanta</option>
-                                                        <option>Consultanta</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1"> </div>
-                                        <div class="col-sm-2">
-                                                <label for="DepResp">Departament Responsabil</label>
-                                                <select class="form-control input-sm" id="DepResp">
-                                                        <option>Dep. Tehnic</option>
-                                                        <option>Dep. IT</option>
-                                                        <option>Dep. Comercial</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1"> </div>
-                                        <div class="col-sm-2">
-                                                <label for="CategCtr">Tip Cheltuiala/Venit</label>
-                                                <select class="form-control input-sm" id="StatusCtr">
-                                                        <option>Cheltuieli cu PSI</option>
-                                                        <option>Cheltuieli IT</option>
-                                                        <option>Venituri Chirii</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-sm-1"> </div>
-                                        <div class="col-sm-2">
-                                                <label for="CategCtr">Linie CashFlow</label>
-                                                <select class="form-control input-sm" id="StatusCtr">
-                                                        <option>Plati Mentenanta</option>
-                                                        <option>Plati PSI</option>
-                                                        <option>Incasari Chirii</option>
-                                                </select>
-                                        </div>
-                                </div>
-                                <div clas="row">
-                                        <div class="col-sm-1">
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="example-date-input" class="col-2 col-form-label">Data Contract</label>
-                                                <div class="col-10">
-                                                        <input class="form-control input-sm" type="date" id="DataCtr">
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-1">
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="example-date-input" class="col-2 col-form-label">Data Start Contract</label>
-                                                <div class="col-10">
-                                                        <input class="form-control input-sm" type="date" id="DataStartCtr">
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-1">
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="example-date-input" class="col-2 col-form-label">Data Final Contract</label>
-                                                <div class="col-10">
-                                                        <input class="form-control input-sm" type="date" id="DataFinalCtr">
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-1">
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="example-date-input" class="col-2 col-form-label">Data Incetare Contract</label>
-                                                <div class="col-10">
-                                                        <input class="form-control input-sm" type="date" id="DataIncetareCtr">
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-                <div class="row">
-
-                        <div class="col-sm-12">
-                                <div class="row">
-                                        <div class="col-sm-1">
-
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <div class="radio"> Preulgire Automata
-                                                        <label>
-                                                                <input type="radio" name="optradio">Da</label>
-                                                </div>
-                                                <div class="radio">
-                                                        <label>
-                                                                <input type="radio" name="optradio">Nu</label>
-                                                </div>
-
-
-                                        </div>
-                                        <div class="col-sm-1">
-
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="NrCtr">Zile Notificare Prelungire</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Zile Notificare Prelungire">
-                                        </div>
-                                        <div class="col-sm-1">
-
-
-                                        </div>
-                                        <div class="col-sm-2">
-                                                <label for="example-date-input" class="col-2 col-form-label">Data Notificare Prelungire</label>
-                                                <div class="col-10">
-                                                        <input class="form-control input-sm" type="date" id="DataIncetareCtr">
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-sm-12">
-                        <div class="row">
-                                <div class="col-sm-1">
-                                        <div>
-                                                <button type="button" class="btn btn-primary" (click)="openModal(template)">Adauga Adresa</button>
-                                        </div>
-
-                                </div>
-                        </div>
-                </div>
-        </div>
-
-
-
-        <br>
-
-        <div class="container-fluid" id="container">
-                <div class="row">
-
-                        <div class="col-sm-12">
-                                <div class="row">
-
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Nume Responsabil Partener</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Nume Responsabil Partener">
-                                        </div>
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Nume Responsabil Intern</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Nume Responsabil Intern">
-                                        </div>
-                                </div>
-                                <div class="row">
-
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Email Responsabil Partener</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Email Responsabil Partener">
-                                        </div>
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Email Responsabil Intern</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Email Responsabil Intern">
-                                        </div>
-                                </div>
-                                <div class="row">
-
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Telefon. Responsabil Partener</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Telefon. Responsabil Partener">
-                                        </div>
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-4">
-                                                <label for="NrCtr">Telefon. Responsabil Intern</label>
-                                                <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Telefon. Responsabil Intern">
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </div>
-        <br>
-        <div class="container-fluid" id="container">
-                <div class="row">
-
-                        <div class="col-sm-12">
-                                <div class="row">
-                                        <div class="col-sm-1"></div>
-                                        <div class="col-sm-9">
-                                                <label for="Note">Note Contract</label>
-                                                <textarea Id="Note" class="form-control input-sm" style="min-width: 50%"></textarea>
-                                                <br>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </div>
-
-        <div class="container-fluid">
-                <div class="row">
-                        <button class="btn btn-primary">
-                                <span class="glyphicon glyphicon-chevron-left"></span>Inapoi</button>
-                        <button class="btn btn-success ">
-                                Inainte
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                        </button>
-                </div>
-
-        </div>
-</form>
-<br>
-<br>
-<br>
-<br>
-<button (click)="trimite()">Trimite</button>
-
-<ng-template #template>
-        <div class="modal-header">
-                <h4 class="modal-title pull-left">Introduceti Adresa</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                        <span aria-hidden="true">&times;</span>
-                </button>
-        </div>
-        <div class="modal-body">
-
-                <div>
-                        <label for="NrCtr">Tara</label>
-                        <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Tara">
-                </div>
-                <div>
-                        <label for="NrCtr">Judet</label>
-                        <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Judet">
-                </div>
-                <div>
-                        <label for="NrCtr">Oras</label>
-                        <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Oras">
-                </div>
-                <div>
-                        <label for="NrCtr">Strada</label>
-                        <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Strada">
-                </div>
-                <div>
-                        <label for="NrCtr">Numar</label>
-                        <input type="text" class="form-control input-sm" id="NrCtr" placeholder="Numar">
-                </div>
-        </div>
-
-        <div class="container-fluid">
-                <div class="row">
-                        <button class="btn btn-primary">
-                                <span></span>Salveaza</button>
-                        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                                <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>
-
-        </div>
-
-</ng-template>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        In atentia
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <mat-form-field>
+                                <input matInput>
+                        </mat-form-field>
+                </mat-grid-tile>
+        </mat-grid-list>
+       
+</div>

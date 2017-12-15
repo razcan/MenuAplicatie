@@ -9,6 +9,8 @@ import {HttpModule} from '@angular/http';
 import {CdkTableModule} from '@angular/cdk/table';
 import * as $ from 'jquery/dist/jquery.min.js';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {VERSION} from '@angular/material';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

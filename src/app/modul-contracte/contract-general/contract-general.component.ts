@@ -65,6 +65,27 @@ StateContract = [
   {value: 'Analiza', viewValue: 'Analiza'}
 ];
 
+ContractCategory = [
+  {value: 'Partener 1', viewValue: 'Partener 1'},
+  {value: 'Partener 2', viewValue: 'Partener 2'},
+  {value: 'Partener 3', viewValue: 'Partener 3'}
+];
+
+ContractDepartment = [
+  {value: 'Partener 1', viewValue: 'Partener 1'},
+  {value: 'Partener 2', viewValue: 'Partener 2'},
+  {value: 'Partener 3', viewValue: 'Partener 3'}
+];
+
+PLLine = [
+  {value: 'Partener 1', viewValue: 'Partener 1'},
+  {value: 'Partener 2', viewValue: 'Partener 2'},
+  {value: 'Partener 3', viewValue: 'Partener 3'}
+];
+
+
+
+
 email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
@@ -72,6 +93,8 @@ email = new FormControl('', [Validators.required, Validators.email]);
         this.email.hasError('email') ? 'Not a valid email' :
             '';
   }
+
+align = 'start';
 
 date = new FormControl(new Date());
 serializedDate = new FormControl((new Date()).toISOString());

@@ -48,6 +48,7 @@ import 'core-js/es6/reflect';
 import 'zone.js/dist/zone';
 import 'hammerjs/hammer';
 
+
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.
  * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation

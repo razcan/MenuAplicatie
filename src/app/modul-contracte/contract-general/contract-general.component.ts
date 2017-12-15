@@ -66,21 +66,21 @@ StateContract = [
 ];
 
 ContractCategory = [
-  {value: 'Partener 1', viewValue: 'Partener 1'},
-  {value: 'Partener 2', viewValue: 'Partener 2'},
-  {value: 'Partener 3', viewValue: 'Partener 3'}
+  {value: 'Servicii', viewValue: 'Servicii'},
+  {value: 'Mentenanta', viewValue: 'Mentenanta'},
+  {value: 'Consultanta', viewValue: 'Consultanta'}
 ];
 
 ContractDepartment = [
-  {value: 'Partener 1', viewValue: 'Partener 1'},
-  {value: 'Partener 2', viewValue: 'Partener 2'},
-  {value: 'Partener 3', viewValue: 'Partener 3'}
+  {value: 'Dep. Tehnic', viewValue: 'Dep. Tehnic'},
+  {value: 'Dep. IT', viewValue: 'Dep. IT'},
+  {value: 'Dep. Contabilitate', viewValue: 'Dep. Contabilitate'}
 ];
 
 PLLine = [
-  {value: 'Partener 1', viewValue: 'Partener 1'},
-  {value: 'Partener 2', viewValue: 'Partener 2'},
-  {value: 'Partener 3', viewValue: 'Partener 3'}
+  {value: 'Cheltuieli cu deszapezire', viewValue: 'Cheltuieli cu deszapezire'},
+  {value: 'Cheltuieli cu curataneia', viewValue: 'Cheltuieli cu curataneia'},
+  {value: 'Venituri din inchiriere', viewValue: 'Venituri din inchiriere'}
 ];
 
 

@@ -16,6 +16,17 @@
 }
 
 
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: rgb(0, 0, 0);
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: rgb(0, 0, 0);
+}
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color:rgba(0, 0, 0, 0.26);
+}
+
+
 .VerticalLine {
   border-right: 80px solid rgb(255, 255, 255);
   /* border-left: 40px solid rgb(255, 255, 255);; */

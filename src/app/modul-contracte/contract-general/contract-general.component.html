@@ -59,8 +59,8 @@
                 </mat-grid-tile>
                 <mat-grid-tile class="InputBorder" colspan="2">
                         <mat-select>
-                                <mat-option *ngFor="let partner of PartenerName" [value]="partner.value">
-                                        {{ partner.viewValue }}
+                                <mat-option *ngFor="let category of ContractCategory" [value]="category.value">
+                                        {{ category.viewValue }}
                                 </mat-option>
                         </mat-select>
                 </mat-grid-tile>
@@ -95,8 +95,8 @@
                         </mat-grid-tile>
                         <mat-grid-tile class="InputBorder" colspan="2">
                                 <mat-select>
-                                        <mat-option *ngFor="let partner of PartenerName" [value]="partner.value">
-                                                {{ partner.viewValue }}
+                                        <mat-option *ngFor="let department of ContractDepartment" [value]="department.value">
+                                                {{ department.viewValue }}
                                         </mat-option>
                                 </mat-select>
                         </mat-grid-tile>
@@ -150,8 +150,8 @@
                         </mat-grid-tile>
                         <mat-grid-tile class="InputBorder" colspan="2">
                                         <mat-select>
-                                                        <mat-option *ngFor="let partner of PartenerName" [value]="partner.value">
-                                                                {{ partner.viewValue }}
+                                                        <mat-option *ngFor="let plline of PLLine" [value]="plline.value">
+                                                                {{ plline.viewValue }}
                                                         </mat-option>
                                                 </mat-select>
                         </mat-grid-tile>
@@ -183,10 +183,12 @@
                         <mat-grid-tile > Prelungire A
                                 </mat-grid-tile>
                                 <mat-grid-tile >
-                                                <mat-radio-group [(ngModel)]="align">
-                                                                <mat-radio-button  value="Da">Da</mat-radio-button>
-                                                                <mat-radio-button  value="Nu">Nu</mat-radio-button>
-                                                              </mat-radio-group>
+                                                <section class="example-section">            
+                                                                <mat-radio-group [(ngModel)]="align">
+                                                                  <mat-radio-button class="example-margin" value="Da">Da</mat-radio-button>
+                                                                  <mat-radio-button class="example-margin" value="Nu">Nu</mat-radio-button>
+                                                                </mat-radio-group>
+                                                </section>
                                         </mat-grid-tile>
 
 

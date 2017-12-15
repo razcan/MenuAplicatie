@@ -22,6 +22,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import {ViewEncapsulation} from '@angular/core';
 import {Validators} from '@angular/forms';
+import {PickListModule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-contract-general',

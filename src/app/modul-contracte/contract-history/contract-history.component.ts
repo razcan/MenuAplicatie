@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import {PickListModule, TabViewModule, CodeHighlighterModule} from 'primeng/primeng';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-contract-history',
@@ -8,25 +11,32 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ContractHistoryComponent {
 
-  constructor(public router: Router) {}
-  
-        navigateOnParentGen() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general']);
-        }
-        navigateOnParentDoc() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-documents']);
-        }
-        navigateOnParentTask() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-tasks']);
-        }
-        navigateOnParentAlert() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-alerts']);
-        }
-        navigateOnParentHist() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-history']);
-        }
-        navigateOnParentFin() {
-          this.router.navigate(['/modul-contracte/contract-list/contract-general/contract-financial']);
-        }
+
+Selected;
+Property;
+TypeValue;
+Value;
+
+
+tipValoare(TypeValue) {
+  var rezultat;
+  var Value=TypeValue ;
+  switch(Value) { 
+     case "Text": { 
+        console.log('<input type="text">'); 
+        rezultat='<input type="text">';
+        return rezultat;
+     } 
+     case "Valoare": { 
+        console.log("Valoare"); 
+        break; 
+     } 
+     case "Data": { 
+      console.log("Data"); 
+      break; 
+   } 
+  }
+
+}
 
 }

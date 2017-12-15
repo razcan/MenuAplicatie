@@ -18,3 +18,47 @@
                 <a routerLink="/contract-list/contract-alerts"> Alerte</a>
         </li>
       </ul>
+
+
+      <table>
+                <tr>
+                  <th>Selectat</th>
+                  <th>Denumire Proprietate</th>
+                  <th>Tip Valoare</th>
+                  <th>Valoare</th>
+                </tr>
+                <tr>
+                  <td>
+                          <input type="checkbox" [(ngModel)]="Selected"><br>
+                </td>
+                  <td>
+                                <select [(ngModel)]="Property">
+                                                <option value="Proprietate1">Proprietate1</option>
+                                                <option value="Proprietate2">Proprietate2</option>
+                                                <option value="Proprietate3">Proprietate3</option>
+                                                <option value="Proprietate4">Proprietate4</option>
+                                </select>
+                  </td>
+                  <td>
+                                <select [(ngModel)]="TypeValue">
+                                                <option value="Text">Text</option>
+                                                <option value="Valoare">Valoare</option>
+                                                <option value="Data">Data</option>
+                                </select>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                
+                
+              </table>
+
+              <button (click)="tipValoare(TypeValue)">TipValoare</button>
+
+        <h1>checkbox : {{Selected}}</h1>  
+        <h1>Property : {{Property}}</h1> 
+        <h1>TypeValue : {{TypeValue}}</h1> 
+        <h1><span [innerHTML]="rezultat"></span></h1>
+        <h1>Rezultat: {{rezultat}}</h1>
+        

@@ -85,21 +85,21 @@
                         </mat-select>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                                </mat-grid-tile>
-                        <mat-grid-tile class="LabelLeft">
-                                Departament
-                        </mat-grid-tile>
-                        <mat-grid-tile class="InputBorder" colspan="2">
-                                <mat-select>
-                                        <mat-option *ngFor="let department of ContractDepartment" [value]="department.value">
-                                                {{ department.viewValue }}
-                                        </mat-option>
-                                </mat-select>
-                        </mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Departament
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <mat-select>
+                                <mat-option *ngFor="let department of ContractDepartment" [value]="department.value">
+                                        {{ department.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
         </mat-grid-list>
 
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -117,15 +117,15 @@
                         <input type="text" class="InputSpecial">
                 </mat-grid-tile>
                 <mat-grid-tile>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                                </mat-grid-tile>
-                        <mat-grid-tile class="LabelLeft">
-                                Responsabil
-                        </mat-grid-tile>
-                        <mat-grid-tile class="InputBorder" colspan="2">
-                                <input type="text" class="InputSpecial">
-                        </mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Responsabil
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <input type="text" class="InputSpecial">
+                </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
                 <mat-grid-tile>
@@ -142,19 +142,19 @@
                         <input type="text" class="InputSpecial">
                 </mat-grid-tile>
                 <mat-grid-tile>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                                </mat-grid-tile>
-                        <mat-grid-tile class="LabelLeft">
-                                Tip Chelt/Venit
-                        </mat-grid-tile>
-                        <mat-grid-tile class="InputBorder" colspan="2">
-                                        <mat-select>
-                                                        <mat-option *ngFor="let plline of PLLine" [value]="plline.value">
-                                                                {{ plline.viewValue }}
-                                                        </mat-option>
-                                                </mat-select>
-                        </mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Tip Chelt/Venit
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <mat-select>
+                                <mat-option *ngFor="let plline of PLLine" [value]="plline.value">
+                                        {{ plline.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
         </mat-grid-list>
 
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -164,9 +164,9 @@
 
         <mat-grid-list cols="12" rowHeight="2:1">
 
-                <mat-grid-tile >
+                <mat-grid-tile>
                 </mat-grid-tile>
-                <mat-grid-tile colspan="4" >
+                <mat-grid-tile colspan="4">
                         <mat-form-field class="VerticalLine">
                                 <input matInput [matDatepicker]="picker01" placeholder="Data semnare">
                                 <mat-datepicker-toggle matSuffix [for]="picker01"></mat-datepicker-toggle>
@@ -178,18 +178,18 @@
                                 <mat-datepicker #picker03></mat-datepicker>
                         </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile >
-                        </mat-grid-tile>
-                        <mat-grid-tile > Prelungire A
-                                </mat-grid-tile>
-                                <mat-grid-tile >
-                                                <section class="example-section">            
-                                                                <mat-radio-group [(ngModel)]="align">
-                                                                  <mat-radio-button class="example-margin" value="Da">Da</mat-radio-button>
-                                                                  <mat-radio-button class="example-margin" value="Nu">Nu</mat-radio-button>
-                                                                </mat-radio-group>
-                                                </section>
-                                        </mat-grid-tile>
+                <mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile> Prelungire A
+                </mat-grid-tile>
+                <mat-grid-tile>
+                        <section class="example-section">
+                                <mat-radio-group [(ngModel)]="align">
+                                        <mat-radio-button class="example-margin" value="Da">Da</mat-radio-button>
+                                        <mat-radio-button class="example-margin" value="Nu">Nu</mat-radio-button>
+                                </mat-radio-group>
+                        </section>
+                </mat-grid-tile>
 
 
         </mat-grid-list>
@@ -208,7 +208,7 @@
                 <mat-grid-tile colspan="4">
 
                         <mat-form-field class="VerticalLine">
-                                <input matInput  [matDatepicker]="picker04" placeholder="Data Start  ">
+                                <input matInput [matDatepicker]="picker04" placeholder="Data Start  ">
                                 <mat-datepicker-toggle matSuffix [for]="picker04"></mat-datepicker-toggle>
                                 <mat-datepicker #picker04></mat-datepicker>
                         </mat-form-field>
@@ -220,21 +220,21 @@
                         </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                        </mat-grid-tile>
+                </mat-grid-tile>
                 <mat-grid-tile colspan="2">
-                                <mat-form-field class="VerticalLine">
+                        <mat-form-field class="VerticalLine">
                                 <input matInput [matDatepicker]="picker06" placeholder="Data Notificare  ">
                                 <mat-datepicker-toggle matSuffix [for]="picker06"></mat-datepicker-toggle>
                                 <mat-datepicker #picker06></mat-datepicker>
-                                
-                  </mat-form-field>
+
+                        </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile colspan="1">
                         Nr. zile Notif.
                 </mat-grid-tile>
                 <mat-grid-tile colspan="1">
-                                <input type="text" class="InputSpecial">
-                        </mat-grid-tile>
+                        <input type="text" class="InputSpecial">
+                </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
                 <mat-grid-tile>
@@ -261,27 +261,27 @@
                 </mat-grid-tile>
 
                 <mat-grid-tile>
-                        </mat-grid-tile>
-                        <mat-grid-tile class="LabelLeft">
-                                Centru Cost
-                        </mat-grid-tile>
-                        <mat-grid-tile class="InputBorder" colspan="1">
-                                <mat-select>
-                                        <mat-option *ngFor="let type of StateContract" [value]="type.value">
-                                                {{ type.viewValue }}
-                                        </mat-option>
-                                </mat-select>
-                        </mat-grid-tile>
-                        <mat-grid-tile class="LabelLeft">
-                                Linie CF
-                        </mat-grid-tile>
-                        <mat-grid-tile class="InputBorder" colspan="1">
-                                <mat-select>
-                                        <mat-option *ngFor="let type of StatusContract" [value]="type.value">
-                                                {{ type.viewValue }}
-                                        </mat-option>
-                                </mat-select>
-                        </mat-grid-tile>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Centru Cost
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-select>
+                                <mat-option *ngFor="let type of StateContract" [value]="type.value">
+                                        {{ type.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
+                <mat-grid-tile class="LabelLeft">
+                        Linie CF
+                </mat-grid-tile>
+                <mat-grid-tile class="InputBorder" colspan="1">
+                        <mat-select>
+                                <mat-option *ngFor="let type of StatusContract" [value]="type.value">
+                                        {{ type.viewValue }}
+                                </mat-option>
+                        </mat-select>
+                </mat-grid-tile>
         </mat-grid-list>
 
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -380,6 +380,7 @@
                         <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
-     <hr>               
+        <hr>
+
 
 </div>

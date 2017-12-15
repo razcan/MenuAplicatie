@@ -1,16 +1,24 @@
-/* mat-grid-tile {
-  background: lightblue;
-} */
 
 .InputBorder {
   border-style: groove;
 }
 
-.mat-grid-tile .mat-figure { justify-content: right !important; }
+.mat-grid-tile .mat-figure { justify-content: left !important; }
+
+
+.InputSpecial {
+  
+  width: 100%;
+ }
+ .input:focus {
+  outline: none !important;
+  box-shadow: 1 0 20px rgb(6, 100, 194);
+}
+
 
 .VerticalLine {
-  border-right: 4px solid rgb(255, 255, 255);
-  border-left: 4px solid rgb(255, 255, 255);;
+  border-right: 80px solid rgb(255, 255, 255);
+  /* border-left: 40px solid rgb(255, 255, 255);; */
 
 }
 

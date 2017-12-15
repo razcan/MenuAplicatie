@@ -81,10 +81,8 @@
                 <mat-grid-tile class="LabelLeft">
                         Numar
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="1">
-                        <mat-form-field>
-                                <input matInput>
-                        </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -98,10 +96,8 @@
                 <mat-grid-tile class="LabelLeft">
                         Cod
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="1">
-                        <mat-form-field>
-                                <input matInput>
-                        </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
 
@@ -110,18 +106,22 @@
                 </mat-grid-tile>
         </mat-grid-list>
 
-        <mat-grid-list cols="12" rowHeight="5:1">
-                <mat-grid-tile>
-                </mat-grid-tile>
+        <mat-grid-list cols="12" rowHeight="2:1">
+        
                 <mat-grid-tile class="LabelLeft">
-                        Data
+                        
                 </mat-grid-tile>
-                <mat-grid-tile colspan="2">
-                        <mat-form-field>
-                                <input matInput [matDatepicker]="picker1">
-                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                                <mat-datepicker #picker1></mat-datepicker>
-                        </mat-form-field>
+                <mat-grid-tile colspan="4" rowHeight="2:1">
+                                <mat-form-field class="VerticalLine">
+                                                <input matInput [matDatepicker]="picker1" placeholder="Data semnare">
+                                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field>
+                        <mat-form-field class="VerticalLine">
+                                        <input matInput [matDatepicker]="picker3" placeholder="Durata">
+                                        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker3></mat-datepicker>
+                                </mat-form-field>
                 </mat-grid-tile>
         </mat-grid-list>
 
@@ -132,9 +132,8 @@
 
 
 
-        <mat-grid-list cols="12" rowHeight="5:1">
-                <mat-grid-tile>
-                </mat-grid-tile>
+        <mat-grid-list cols="12" rowHeight="2:1">
+              
                 <mat-grid-tile class="LabelLeft">
                 </mat-grid-tile>
                 <mat-grid-tile colspan="10">
@@ -144,17 +143,13 @@
                                 <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
                                 <mat-datepicker #picker4></mat-datepicker>
                         </mat-form-field>
-                        
+
                         <mat-form-field class="VerticalLine">
                                 <input matInput [matDatepicker]="picker2" placeholder="Data Final  ">
                                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                                 <mat-datepicker #picker2></mat-datepicker>
                         </mat-form-field>
-                        <mat-form-field class="VerticalLine">
-                                <input matInput [matDatepicker]="picker3" placeholder="Durata">
-                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-                                <mat-datepicker #picker3></mat-datepicker>
-                        </mat-form-field>
+
                 </mat-grid-tile>
                 <mat-grid-tile colspan="2">
                 </mat-grid-tile>
@@ -189,7 +184,7 @@
                 </mat-grid-tile>
         </mat-grid-list>
 
-        <mat-grid-list cols="12" rowHeight="3:1">
+        <mat-grid-list cols="12" rowHeight="2:1">
                 <mat-grid-tile>
                 </mat-grid-tile>
                 <mat-grid-tile class="LabelLeft">
@@ -208,30 +203,28 @@
                 </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
-                        <mat-grid-tile colspan="1">
-                        </mat-grid-tile>
-                        <mat-grid-tile colspan="1">
-                                        
-                        </mat-grid-tile>
-                        <mat-grid-tile colspan="4">
-                                        Notificari :
-                        </mat-grid-tile>
-                </mat-grid-list>
-                <mat-grid-list cols="12" rowHeight="5:1">
-                                <mat-grid-tile>
-                                </mat-grid-tile>
-                        </mat-grid-list>
-                
+                <mat-grid-tile colspan="1">
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1">
+
+                </mat-grid-tile>
+                <mat-grid-tile colspan="4">
+                        Notificari :
+                </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="12" rowHeight="5:1">
+                <mat-grid-tile>
+                </mat-grid-tile>
+        </mat-grid-list>
+
         <mat-grid-list cols="12" rowHeight="5:1">
                 <mat-grid-tile>
                 </mat-grid-tile>
                 <mat-grid-tile class="LabelLeft">
                         Adresa
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="1">
-                        <mat-form-field>
-                                <input matInput>
-                        </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="3">
+                        <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -245,10 +238,8 @@
                 <mat-grid-tile class="LabelLeft">
                         Tel/Fax
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="1">
-                        <mat-form-field>
-                                <input matInput>
-                        </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="2">
+                        <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -262,11 +253,11 @@
                 <mat-grid-tile class="LabelLeft">
                         Email
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="2">
-                                <mat-form-field>
-                                                <input matInput required>
-                                                
-                                              </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="3">
+
+                        <input type="text" class="InputSpecial">
+
+
                 </mat-grid-tile>
         </mat-grid-list>
         <mat-grid-list cols="12" rowHeight="5:1">
@@ -280,11 +271,9 @@
                 <mat-grid-tile class="LabelLeft">
                         In atentia
                 </mat-grid-tile>
-                <mat-grid-tile class="InputBorder" colspan="2">
-                        <mat-form-field>
-                                <input matInput>
-                        </mat-form-field>
+                <mat-grid-tile class="InputBorder" colspan="3">
+                        <input type="text" class="InputSpecial">
                 </mat-grid-tile>
         </mat-grid-list>
-       
+
 </div>

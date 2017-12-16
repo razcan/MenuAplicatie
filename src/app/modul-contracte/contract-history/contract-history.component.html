@@ -59,6 +59,27 @@
         <h1>checkbox : {{Selected}}</h1>  
         <h1>Property : {{Property}}</h1> 
         <h1>TypeValue : {{TypeValue}}</h1> 
-        <h1><span [innerHTML]="rezultat"></span></h1>
-        <h1>Rezultat: {{rezultat}}</h1>
-        
+        <div *ngIf="htmlYouWantToAdd" [innerHTML]="htmlYouWantToAdd"></div>
+   
+        <div class="form-group row">
+                        <label for="exampleSelect1" class="col-xs-2 col-form-label">My HTML code</label>
+                        <div class="col-xs-10">
+                            <button type="button" class="btn btn-primary" (click)="addHTML()">ADD</button>
+                        </div>
+                        <hr>
+                        <div *ngIf="htmlYouWantToAdd" [innerHTML]="htmlYouWantToAdd"></div>
+                        <div class="form-group row">
+                                        <label for="exampleSelect1" class="col-xs-2 col-form-label">My HTML code</label>
+                                        <div class="col-xs-10">
+                                            <button type="button" class="btn btn-primary" (click)="htmll()">ADD2</button>
+                                        </div>
+                                        <hr>
+                                        <div *ngIf="htmlYouWantToAdd" [innerHTML]="html2"></div>
+
+
+
+                                        <ul id="myList">
+                                                        <li>Coffee</li>
+                                                        <li>Tea</li>
+                                                      </ul>
+                                        <button (click)="myFunction()">Try it</button>

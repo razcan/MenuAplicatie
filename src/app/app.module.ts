@@ -22,7 +22,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {PickListModule, TabViewModule, CodeHighlighterModule} from 'primeng/primeng';
+// import {PickListModule, TabViewModule, CodeHighlighterModule} from 'primeng/primeng';
 import {
   MatCardModule,
   MatIconModule,
@@ -146,8 +146,6 @@ export const appRoutes: Routes = [
     MatButtonToggleModule,
     MatDatepickerModule,
     MatButtonModule,
-    PickListModule,
-    TabViewModule, CodeHighlighterModule
   ],
   providers: [SubmenuContractService],
   bootstrap: [AppComponent]
